@@ -5,15 +5,13 @@
     <fursona-card/>
     <birthday-card/>
     <social-media/>
+    <simple-footer/>
   </div>
-  <simple-footer/>
   <popup @close="popupActive = !popupActive" type="gallery" :visible="popupActive" :images="gallery"/>
 </template>
 
 <script setup>
-  const gallery = ref(["/img/Fursona.png", "/img/Fursona2.png", "/img/Fursona4.jfif",
-  "/img/Fursona5.jfif", "/img/Fursona6.jfif", "/img/Fursona9.jfif", 
-  "/img/Fursona10.png"])
+  const { data: gallery } = await useFetch('/api/getImage?path=Fursona')
   const popupActive = ref(false)
 </script>
 
@@ -28,6 +26,11 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+  }
+
+  .card-vertical:hover, .card-horizontal:hover, .footer:hover {
+    transition: border .2s;
+    border: 2px solid var(--accent)
   }
 
   .card-horizontal {
@@ -47,17 +50,25 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 2px
   }
 
   .vertical-flex {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2px
   }
 
   @media only screen and (max-width: 768px) {
-    .card {
-        width: 90%
+    .card-vertical, .card-horizontal {
+      width: 90%
+    }
+
+    .horizontal-flex, .card-horizontal {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
   }
 
@@ -152,6 +163,7 @@
     --secondary: #151018;
     --accent: #816293;
     --surface: rgb(191 154 213 / 15%);
+    --surface2: color-mix(in srgb, var(--surface) 50%, transparent);
     --border: rgb(191 154 213 / 5%)
   }
 
@@ -162,6 +174,7 @@
     --secondary: #ece7ef;
     --accent: #8b6c9d;;
     --surface: rgb(79 42 101 / 15%);
+    --surface2: color-mix(in srgb, var(--surface) 50%, transparent);
     --border: rgb(79 42 101 / 5%);
   }
 </style>

@@ -2,7 +2,7 @@
     <div class="fursona-card card-vertical appear">
         <div class="fursona-details">
             <div class="fursona">
-                <NuxtImg preload src="/img/Fursona.png" alt="Fursona"/>
+                <NuxtImg preload src="/img/Fursona/em pé.png" alt="Fursona"/>
             </div>
             <div><h2>Bodedope</h2>
                 <h3>Aparencia</h3>
