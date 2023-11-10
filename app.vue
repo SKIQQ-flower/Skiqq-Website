@@ -72,10 +72,12 @@
     }
   }
 
-  .appear {
-    animation: appear .5s cubic-bezier(0.64, 0.57, 0.67, 1.53);
-    animation-timeline: view(block);
-    animation-range: cover 0% cover 100%;
+  @supports (animation-timeline: view(block)) {
+    .appear {
+      animation: appear .5s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+      animation-timeline: view(block) !important;
+      animation-range: cover 0% cover 100%;
+    }
   }
 
   @keyframes appear {
