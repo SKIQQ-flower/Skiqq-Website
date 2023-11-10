@@ -15,6 +15,8 @@ export default defineNuxtConfig({
         'avatars0.githubusercontent.com'
       ]
   },
+  ssr: false,
+  
   app: {
     head: {
       charset: 'utf-8',
