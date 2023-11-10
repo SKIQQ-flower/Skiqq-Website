@@ -74,7 +74,7 @@
 
   @supports (animation-timeline: view(block)) {
     .appear {
-      animation: appear .5s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+      animation: appear .5s linear;
       animation-timeline: view(block) !important;
       animation-range: cover 0% cover 100%;
     }
@@ -102,12 +102,14 @@
   }
 
   body {
-    display: flex;
     background-color: var(--background);
     color: var(--text);
-    flex-direction: column;
     font-family: "Noto Sans", Inter, Sans;
-    margin: 0
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
   }
 
   #__nuxt {
