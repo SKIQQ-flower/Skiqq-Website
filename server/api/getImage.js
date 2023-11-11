@@ -1,15 +1,16 @@
 import fs from 'fs'
-import { ref } from 'vue'
 import path from 'path'
 
-export default defineEventHandler((event) => {
-    const query = getQuery(event)
-    let absolutePath = `/img/${query.path}`
-    let files = fs.readdirSync(path.resolve(process.cwd(), `./public/img/${query.path}`))
-    const images = []
-    for (let i = 0; i < files.length; i++) {
-        let image = `${absolutePath}/${files[i]}`
-        images.push(image)
-    }
-    return images
+const folderPath = './public/img/Fursona';
+const relativeFolderPath = path.relative(process.cwd(), folderPath);
+    
+
+export default defineEventHandler({
+    const files = fs.readdirSync(folderPath)
+
+    const filesPaths = files.map(
+        (fileName) => `/_nuxt/${relativeFolderPath}/${fileName}`
+    );
+
+    return filesPaths;
 })

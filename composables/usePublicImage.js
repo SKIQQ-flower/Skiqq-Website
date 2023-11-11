@@ -1,15 +1,15 @@
-import fs from 'fs'
+import fs from 'fs';
+import path from 'path';
 
-export default function(event) {
-    //let files = fs.readdirSync(`./public/img/${path}`)
-    //console.log(files)
-    //const images = ref([])
-    //for (let i = 0; i < files.length; i++) {
-    //    let image = `/img/${path}/${files[i]}`
-    //    images.value.push(image)
-    //}
-    //return images
-    const name = getRouterParam(event, 'name')
+const folderPath = './public/img/Fursona';
+const relativeFolderPath = path.relative(process.cwd(), folderPath);
 
-    return `Hello, ${name}!`
+export default function () {
+  const files = fs.readdirSync(folderPath);
+
+  const filesPaths = files.map(
+    (fileName) => `/_nuxt/${relativeFolderPath}/${fileName}`
+  );
+
+  return filesPaths;
 }
