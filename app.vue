@@ -2,7 +2,7 @@
   <titlebar/>
   <div class="center">
     <Profile/>
-    <fursona-card/>
+    <fursona-card @view-gallery="popupActive = !popupActive"/>
     <birthday-card/>
     <social-media/>
     <simple-footer/>
@@ -97,8 +97,23 @@
     }
   }
 
+  .button-secondary {
+    margin: 10px;
+    background-color: var(--secondary);
+  }
+
   button {
-    margin: 10px
+    padding: 0.5em;
+    border-radius: 10px;
+    font-size: 1.3em;
+    border: none;
+    background-color: var(--accent);
+  }
+
+  .button-primary {
+    margin: 10px;
+    background-color: var(--primary);
+    color: var(--secondary);
   }
 
   body {

@@ -39,35 +39,28 @@
         transition: opacity 0.3s ease-in-out;
     }
 
+    .modal-fade-enter-active .popup {
+        animation: popup 0.5s reverse
+    }
+
+    .modal-fade-leave-active .popup {
+        animation: popup 0.5s
+    }
+
     .modal-fade-enter-from,
     .modal-fade-leave-to {
         opacity: 0;
     }
 
-    .popup {
-        animation: popup 0.3s ease-in-out
-    }
-
-    @keyframes opacity {
-        0% {
-            opacity: 0
-        }
-
-        100% {
-            opacity: 1
-        }
-    }
-
     @keyframes popup {
         0% {
-            transform: scale(0);
-
+            transform: scale(1)
         }
-        60% {
-            transform: scale(1.1);
+        50% {
+            transform: scale(0.7)
         }
-        90% {
-            transform: scale(1);
+        100% {
+            transform: scale(0)
         }
     }
 </style>

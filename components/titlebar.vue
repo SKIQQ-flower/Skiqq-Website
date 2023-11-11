@@ -22,15 +22,6 @@
         color: var(--text)
     }
 
-    button {
-        padding: 0.5em;
-        border-radius: 10px;
-        font-size: 1.2em;
-        border: none;
-        background-color: var(--accent);
-        color: var(--text)
-    }
-
     .titlebartitle {
         display: flex;
         align-items: center;

@@ -13,6 +13,7 @@
                 <p>Barulho, carros de tele-mensagem, ruidos de giz, fumantes e alcolatras, erros de programação, erros de gramática e cogumelos.</p>
                 <h3>Descrições</h3>
                 <p>Bodedope é extrovertido, ama contar piadas e socializar, mas por pouco tempo, até ele chegar em casa e voltar a fazer os seus jogos. Ele tem poucos amigos, se desconsiderar os virtuais. Seu maior amigo é um coelho no qual controla o espaço tempo, vindo de outra dimensão. Ele gosta muito de computadores, e mantém o sonho de um dia deixar de ter um pc da xuxa.</p>
+                <button class="button-primary" @click="$emit('view-gallery')">Ver galeria</button>
             </div>
         </div>
     </div>
