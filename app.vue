@@ -7,7 +7,7 @@
     <social-media/>
     <simple-footer/>
   </div>
-  <popup @close="popupActive = !popupActive" type="gallery" :visible="popupActive" :images="gallery"/>
+  <popup @close="popupActive = !popupActive" title="Galeria do Bodedope" type="gallery" :visible="popupActive" :images="gallery"/>
 </template>
 
 <script setup>
