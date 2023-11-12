@@ -1,6 +1,5 @@
 export default defineI18nConfig(() => ({
-  locale: 'pt-BR', // set locale
-  fallbackLocale: 'en',
+  fallbackLocale: 'en-US',
   messages: {
     "pt-BR": {
       button_source_code: 'Código Fonte',
