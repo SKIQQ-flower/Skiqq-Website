@@ -7,9 +7,16 @@ const head = useLocaleHead({
 })
 
 useHead({
-  titleTemplate: (titleChunk) => {
-    return titleChunk ? `${t(titleChunk)} - Skiqq Website` : 'Skiqq Website';
-  },
+    titleTemplate: (titleChunk) => {
+        return titleChunk ? `${t(titleChunk)} - Skiqq Website` : 'Skiqq Website';
+    },
+    link: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/svg/bodedope icon.svg'
+        }
+    ]
 })
 </script>
 
