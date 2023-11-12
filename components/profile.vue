@@ -56,13 +56,6 @@
     }
 
     @media only screen and (max-width: 768px) {
-        .profile {
-            width: 90%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
         .profile img {
             height: 100%;
             object-fit: contain;

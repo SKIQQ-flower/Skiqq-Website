@@ -10,7 +10,8 @@ export default defineI18nConfig(() => ({
       title_i_am: "Eu sou",
       title_experiences: "Experiencias",
       title_languages_and_frameworks: "Eu uso",
-      home_page: "Página inicial"
+      home_page: "Página inicial",
+      home_page_description: "Skiqq é um programador, designer, pixel artista e desenvolvedor de jogos."
     },
     "en-US": {
       button_source_code: 'Source Code',
@@ -21,7 +22,8 @@ export default defineI18nConfig(() => ({
       title_i_am: "I am",
       title_experiences: "Experiences",
       title_languages_and_frameworks: "I use",
-      home_page: "Homepage"
+      home_page: "Homepage",
+      home_page_description: "Skiqq is a programmer, designer, pixel artist e gamedev."
     }
   }
 }))

@@ -1,7 +1,7 @@
 <template>
     <div class="titlebar">
         <div class="titlebartitle">
-            <Icon name="noto:grinning-cat" size="2em"/>
+            <img src="/svg/bodedope icon.svg" width="50em">
             <h3>Skiqq</h3>
         </div>
         <div class="titlebarbuttons">

@@ -1,5 +1,4 @@
 <script setup>
-const route = useRoute()
 const { t, locale } = useI18n()
 const head = useLocaleHead({
   addDirAttribute: true,
@@ -10,9 +9,8 @@ const head = useLocaleHead({
 useHead({
   titleTemplate: (titleChunk) => {
     return titleChunk ? `${t(titleChunk)} - Skiqq Website` : 'Skiqq Website';
-  }
+  },
 })
-
 </script>
 
 <template>
