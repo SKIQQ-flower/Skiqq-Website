@@ -1,5 +1,6 @@
 <template>
   <div class="center">
+    <NuxtLink href="/about"/>
     <Profile/>
     <fursona-card @view-gallery="popupActive = !popupActive"/>
     <birthday-card/>
@@ -10,6 +11,9 @@
 </template>
 
 <script setup>
+    useHead({
+    title: 'home_page' // set resource key
+  })
   const gallery = ref(["/img/Fursona/cantando.jfif",
   "/img/Fursona/em cima da mesa.jpg","/img/Fursona/em pé.png",
   "/img/Fursona/flores.jpg","/img/Fursona/lavando louça.jfif",

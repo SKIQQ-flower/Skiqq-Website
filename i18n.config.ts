@@ -9,7 +9,8 @@ export default defineI18nConfig(() => ({
       role_autist: "Autista",
       title_i_am: "Eu sou",
       title_experiences: "Experiencias",
-      title_languages_and_frameworks: "Eu uso"
+      title_languages_and_frameworks: "Eu uso",
+      home_page: "Página inicial"
     },
     "en-US": {
       button_source_code: 'Source Code',
@@ -19,7 +20,8 @@ export default defineI18nConfig(() => ({
       role_autist: "Autist",
       title_i_am: "I am",
       title_experiences: "Experiences",
-      title_languages_and_frameworks: "I use"
+      title_languages_and_frameworks: "I use",
+      home_page: "Homepage"
     }
   }
 }))

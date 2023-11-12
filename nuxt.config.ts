@@ -10,14 +10,14 @@ export default defineNuxtConfig({
   i18n: {
     baseUrl: 'https://skiqq.vercel.app',
     locales: [
-        {
-          code: 'en-US',
-          iso: 'en-US'
-        }, 
-        {
-          code: 'pt-BR',
-          iso: 'pt-BR'
-        }
+      {
+        code: 'en',
+        iso: 'en-US'
+      }, 
+      {
+        code: 'pt',
+        iso: 'pt-BR'
+      }
     ],
     defaultLocale: 'en-US',
     vueI18n: './i18n.config.ts' // if you are using custom path, default 
@@ -30,9 +30,6 @@ export default defineNuxtConfig({
   app: {
     head: {
       charset: 'utf-8',
-      htmlAttrs: {
-        lang: 'pt-BR'
-      },
       viewport: 'width=device-width, initial-scale=1',
       link: [
         {

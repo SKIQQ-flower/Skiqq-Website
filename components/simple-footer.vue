@@ -2,7 +2,6 @@
     <footer>
         <div class="horizontal-flex footer">
             <NuxtLink href="/">Página Inicial</NuxtLink>
-            <NuxtLink href="/blog">Blog</NuxtLink>
             <a href="https://github.com/SKIQQ-flower/Skiqq-Website">Código Fonte</a>
         </div>
     </footer>

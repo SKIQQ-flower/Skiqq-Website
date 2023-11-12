@@ -1,23 +1,18 @@
 <script setup>
 const route = useRoute()
-const { t, locale } = useI18n()
+const { t } = useI18n()
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',
   addSeoAttributes: true
 })
-
-useHead({
-  titleTemplate: (titleChunk) => {
-    return titleChunk ? `${t(titleChunk)} - Skiqq Website` : 'Skiqq Website';
-  }
-})
-
+console.log(head)
+const title = computed(() => t('layouts.title', { title: t(route.meta.title ?? 'TBD') }))
 </script>
 
 <template>
   <div>
-    <Html :lang="locale" :dir="head.htmlAttrs.dir">
+    <Html :lang="head.htmlAttrs.lang" :dir="head.htmlAttrs.dir">
       <Head>
         <Title>{{ title }}</Title>
         <template v-for="link in head.link" :key="link.id">
@@ -28,8 +23,7 @@ useHead({
         </template>
       </Head>
       <Body>
-        <titlebar/>
-        <NuxtPage/>
+        <slot />
       </Body>
     </Html>
   </div>
