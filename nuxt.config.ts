@@ -8,6 +8,18 @@ export default defineNuxtConfig({
     '@nuxt/image'
   ],
   i18n: {
+    baseUrl: 'https://skiqq.vercel.app',
+    locales: [
+        {
+          code: 'en-US',
+          iso: 'en-US'
+        }, 
+        {
+          code: 'pt-BR',
+          iso: 'pt-BR'
+        }
+    ],
+    defaultLocale: 'en-US',
     vueI18n: './i18n.config.ts' // if you are using custom path, default 
   },
   image: {
