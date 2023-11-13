@@ -11,7 +11,8 @@
     align-items: center;
 }
 
-.card-vertical:hover, .card-horizontal:hover, .footer:hover {
+.card-vertical:hover, .card-horizontal:hover, .footer:hover,
+.card-vertical:focus, .card-horizontal:focus, .footer:focus {
   transition: border .2s;
   border: 2px solid var(--accent)
 }
@@ -84,7 +85,6 @@
 }
 
 .button-secondary {
-  margin: 10px;
   background-color: var(--secondary);
 }
 
@@ -97,7 +97,6 @@ button {
 }
 
 .button-primary {
-  margin: 10px;
   background-color: var(--primary);
   color: var(--secondary);
 }
