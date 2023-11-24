@@ -8,6 +8,11 @@ export default defineNuxtConfig({
     '@nuxt/image'
   ],
   i18n: {
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',  // recommended
+    },
     baseUrl: 'https://skiqq.vercel.app',
     locales: [
       {
@@ -16,7 +21,8 @@ export default defineNuxtConfig({
       }, 
       {
         code: 'pt',
-        iso: 'pt-BR'
+        iso: 'pt',
+        isCatchallLocale: true
       }
     ],
     defaultLocale: 'en-US',

@@ -6,6 +6,7 @@ const head = useLocaleHead({
   addSeoAttributes: true
 })
 
+
 useHead({
     titleTemplate: (titleChunk) => {
         return titleChunk ? `${t(titleChunk)} - Skiqq Website` : 'Skiqq Website';
