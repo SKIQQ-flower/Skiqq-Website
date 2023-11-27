@@ -1,7 +1,7 @@
 export default defineI18nConfig(() => ({
   fallbackLocale: 'en-US',
   messages: {
-    "pt": {
+    "pt-BR": {
       button_source_code: 'Código Fonte',
       quote: 'O bode mais fofo do globo terrestre!',
       role_programmer: "Programador Frontend & Backend",
