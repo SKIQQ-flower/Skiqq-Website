@@ -21,7 +21,6 @@ useHead({
   meta: [
     { name: 'description', content: 'O bode mais fofo do universo!' },
     { name: 'keywords', content: 'vue, nuxt, javascript, autismo, autism, skiqq' },
-    { name: 'google-site-verification', content: 'zIQigBM1zykKMsMQadwfmd6ia7UzACFWKUzpD-DU_Dw' }
   ],
 })
 </script>
