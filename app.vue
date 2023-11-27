@@ -9,7 +9,7 @@ const head = useLocaleHead({
 
 useHead({
     titleTemplate: (titleChunk) => {
-        return titleChunk ? `${t(titleChunk)} - Skiqq Website` : 'Skiqq Website';
+        return titleChunk ? `${t(titleChunk)} - ${t('website_name')}` : `${t('website_name')}`;
     },
     link: [
         {

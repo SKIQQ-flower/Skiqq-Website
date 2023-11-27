@@ -19,6 +19,7 @@ export default defineI18nConfig(() => ({
       dislikes_label: "Barulho, carros de tele-mensagem, ruidos de giz, fumantes e alcolatras, erros de programação, erros de gramática e cogumelos.",
       description_label: "Bodedope é extrovertido, ama contar piadas e socializar, mas por pouco tempo, até ele chegar em casa e voltar a fazer os seus jogos. Ele tem poucos amigos, se desconsiderar os virtuais. Seu maior amigo é um coelho no qual controla o espaço tempo, vindo de outra dimensão. Ele gosta muito de computadores, e mantém o sonho de um dia deixar de ter um pc da xuxa.",
       home_page: "Página inicial",
+      website_name: "Site do Skiqq",
       home_page_description: "Skiqq é um programador, designer, pixel artista e desenvolvedor de jogos."
     },
     "en-US": {
@@ -39,6 +40,7 @@ export default defineI18nConfig(() => ({
       dislikes_label: "Noise, tele-message cars, chalk noises, smokers and alcoholics, programming errors, grammar errors, and mushrooms.",
       description_label: "Bodedope is extroverted, loves to tell jokes and socialize, but only for a short time, until he gets home and goes back to making his games. He has few friends, if you disregard the virtual ones. His best friend is a rabbit who controls space-time, coming from another dimension. He really likes computers, and maintains the dream of one day no longer having a poor quality computer.",
       home_page: "Homepage",
+      website_name: "Skiqq Website",
       home_page_description: "Skiqq is a programmer, designer, pixel artist e gamedev."
     }
   }
