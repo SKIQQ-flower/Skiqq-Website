@@ -17,7 +17,8 @@ useHead({
           type: 'image/x-icon',
           href: '/svg/bodedope icon.svg'
         }
-    ]
+    ],
+    
 })
 </script>
 
