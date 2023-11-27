@@ -20,8 +20,8 @@ export default defineNuxtConfig({
         iso: 'en-US'
       }, 
       {
-        code: 'pt',
-        iso: 'pt',
+        code: 'pt-BR',
+        iso: 'pt-BR',
         isCatchallLocale: true
       }
     ],
