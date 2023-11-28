@@ -24,7 +24,7 @@
                         <Icon ref="close" name="material-symbols:close"/>
                     </div>
                 </div>
-                <h1>{{ props.title }}</h1>
+                <h2 class="popupTitle">{{ props.title }}</h2>
                 <div v-if="props.type == 'gallery'" class="gallery">
                     <NuxtImg loading="lazy" :src="image" quality="30" format="webp" v-for="image in props.images"/>
                 </div>
@@ -66,6 +66,13 @@
 </style>
 
 <style scoped>
+    .popupTitle {
+        background-color: var(--border);
+        max-width: 100%;
+        padding: 5px;
+        border-radius: 15px;
+    }
+
     .action-btn {
         padding: 5px;
         border-radius: 5px;
@@ -89,7 +96,7 @@
     }
 
     img {
-        max-height: 15rem;
+        height: 15rem;
         border-radius: 20px;
     }
     
@@ -122,7 +129,7 @@
 
     .popup {
         background-color: var(--background);
-        width: 95%;
+        width: 90%;
         max-height: 90%;
         margin-top: 0.5rem;
         border-radius: 20px;
@@ -131,11 +138,5 @@
         align-items: center;
         box-sizing: border-box;
         border: 2px solid var(--border)
-    }
-
-    @media only screen and (max-width: 768px) {
-        .actions {
-            display: none
-        }
     }
 </style>

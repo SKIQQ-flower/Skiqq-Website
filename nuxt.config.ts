@@ -16,7 +16,7 @@ export default defineNuxtConfig({
     baseUrl: 'https://skiqq.vercel.app',
     locales: [
       {
-        code: 'en',
+        code: 'en-US',
         iso: 'en-US'
       }, 
       {
