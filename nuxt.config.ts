@@ -5,7 +5,8 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     'nuxt-icon',
     '@nuxtjs/i18n',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxt/content'
   ],
   i18n: {
     detectBrowserLanguage: {
@@ -16,13 +17,12 @@ export default defineNuxtConfig({
     baseUrl: 'https://skiqq.vercel.app',
     locales: [
       {
-        code: 'en-US',
-        iso: 'en-US'
+        code: 'en',
+        iso: 'en-US',
       }, 
       {
-        code: 'pt-BR',
+        code: 'pt',
         iso: 'pt-BR',
-        isCatchallLocale: true
       }
     ],
     defaultLocale: 'en-US',

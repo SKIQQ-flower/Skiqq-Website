@@ -24,11 +24,13 @@ export default defineI18nConfig(() => ({
       website_name: "Site do Skiqq",
       social_media: "Redes Sociais",
       view_gallery: "Ver galeria",
+      blog_name: "Blog do Skiqq",
       bodedope_gallery: "Galeria do Bodedope",
       home_page_description: "Skiqq é um programador, designer, pixel artista e desenvolvedor de jogos."
     },
     "en-US": {
       bodedope_gallery: "Bodedope's gallery",
+      blog_name: "Skiqq's Blog",
       social_media: "Social Media",
       view_gallery: "View gallery",
       button_source_code: 'Source Code',
