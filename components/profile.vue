@@ -1,6 +1,6 @@
 <template>
     <div class="profile card-horizontal appear">
-        <NuxtImg src="/img/Fursona/profile-photo.jpg" alt="Foto de perfil"/>
+        <NuxtImg src="/img/Fursona/pfp.jpg" alt="Foto de perfil"/>
         <div class="quote">
             <h2>Skiqq</h2>
             <p>{{ $t('quote') }}</p>
