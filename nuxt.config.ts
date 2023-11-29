@@ -14,7 +14,6 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',  // recommended
     },
-    strategy: 'no_prefix',
     baseUrl: 'https://skiqq.vercel.app',
     locales: [
       {
@@ -22,8 +21,9 @@ export default defineNuxtConfig({
         iso: 'en-US',
       }, 
       {
-        code: 'pt',
+        code: 'pt-BR',
         iso: 'pt-BR',
+        isCatchallLocale: true
       }
     ],
     defaultLocale: 'en-US',
