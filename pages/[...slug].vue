@@ -13,18 +13,24 @@ useHead({
 </script>
 
 <template>
-    <main>
-        <div class="center">
-            <ContentRenderer class="card-vertical blog" :value="data" />
+    <div class="center">
+        <ContentRenderer class="card-vertical blog" :value="data" />
+        <div class="blogfooter">
+            <NuxtImg style="border-radius: 50%;" :src="data.authorpfp" width="40"/>
+            <p><strong>{{ data.author }}</strong> {{ $t('at_time_blog') }} {{ DateTime.fromISO(data.date).setLocale(locale).toLocaleString(DateTime.DATETIME_MED) }}</p>
         </div>
-        <div class="horizontal-flex">
-            <p>{{ DateTime.fromISO(data.date).setLocale(locale).toLocaleString(DateTime.DATETIME_MED) }}</p>
-        </div>
-  </main>
+    </div>
 </template>
   
 
 <style>
+    .blogfooter {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
     .blog h1 {
         text-align: center;
         width: 100%;
@@ -32,5 +38,9 @@ useHead({
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         align-self: stretch;
+    }
+
+    .blog {
+        align-items: flex-start;
     }
 </style>

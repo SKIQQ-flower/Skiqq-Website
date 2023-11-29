@@ -126,6 +126,21 @@ body {
 #__nuxt {
   display: flex;
   flex-direction: column;
+  min-height: 100dvh;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  margin: 5px
 }
 
 h1,h2,h3,h4,h5,h6,p,span {
