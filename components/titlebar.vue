@@ -33,7 +33,6 @@
         display: flex;
         padding: 5px 15px;
         background-color: var(--surface);
-        margin-bottom: 10px;
         border-radius: 0px 0px 15px 15px;
         border: 2px solid var(--border);
         flex-direction: row;
