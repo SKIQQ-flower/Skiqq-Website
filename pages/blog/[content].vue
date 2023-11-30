@@ -22,7 +22,8 @@ useHead({
             <NuxtImg style="border-radius: 50%;" :src="data.authorpfp" width="40"/>
             <p><strong>{{ data.author }}</strong> {{ $t('at_time_blog') }} {{ DateTime.fromISO(data.date).setLocale(locale).toLocaleString(DateTime.DATETIME_MED) }}</p>
         </div>
-        <Giscus
+        <div class="comments">
+            <Giscus
             id="comments"
             repo="SKIQQ-flower/Skiqq-Website"
             repoid="R_kgDOKeaulQ"
@@ -36,6 +37,7 @@ useHead({
             theme="preferred_color_scheme"
             lang="en"
             loading="lazy"/>
+        </div>
     </div>
     <div v-else>
         
@@ -44,6 +46,14 @@ useHead({
   
 
 <style>
+    .gsc-main {
+        gap: 1rem
+    }
+
+    .comments {
+        width: 80%
+    }
+
     .blogfooter {
         width: 80%;
         display: flex;
