@@ -25,7 +25,7 @@ useHead({
         <Giscus
             id="comments"
             repo="SKIQQ-flower/Skiqq-Website"
-            repoid="R_kgDOKeaul"
+            repoid="R_kgDOKeaulQ"
             category="General"
             categoryid="DIC_kwDOKeaulc4CbYDT"
             mapping="pathname"
