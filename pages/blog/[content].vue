@@ -1,9 +1,10 @@
 <script setup>
-const route = useRoute()
 import { DateTime } from "luxon";
-const { data } = await useAsyncData('home', () => queryContent(route.params.id).findOne())
+import Giscus from '@giscus/vue';
+const route = useRoute()
+const { data } = await useAsyncData('home', () => queryContent(route.params).findOne())
 const locale = useBrowserLocale()
-console.log(route.params.id)
+console.log(route.params)
 useContentHead(data)
 const { t } = useI18n()
 useHead({
@@ -15,12 +16,29 @@ useHead({
 </script>
 
 <template>
-    <div class="center">
+    <div v-if="$route.params" class="center">
         <ContentRenderer class="card-vertical blog" :value="data" />
         <div class="blogfooter">
             <NuxtImg style="border-radius: 50%;" :src="data.authorpfp" width="40"/>
             <p><strong>{{ data.author }}</strong> {{ $t('at_time_blog') }} {{ DateTime.fromISO(data.date).setLocale(locale).toLocaleString(DateTime.DATETIME_MED) }}</p>
         </div>
+        <Giscus
+            id="comments"
+            repo="SKIQQ-flower/Skiqq-Website"
+            repoid="R_kgDOKeaul"
+            category="General"
+            categoryid="DIC_kwDOKeaulc4CbYDT"
+            mapping="pathname"
+            term="Welcome to giscus!"
+            reactionsenabled="1"
+            emitmetadata="0"
+            inputposition="bottom"
+            theme="preferred_color_scheme"
+            lang="en"
+            loading="lazy"/>
+    </div>
+    <div v-else>
+        
     </div>
 </template>
   

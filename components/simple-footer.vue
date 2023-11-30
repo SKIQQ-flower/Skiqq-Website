@@ -19,5 +19,17 @@
     footer {
         width: 100%;
     }
+</style>
 
+<style scoped>
+    a, a:link, a:visited {
+        text-decoration: none;
+        color: var(--text);
+        transition: all 0.2s
+    }
+
+    a:hover {
+        color: var(--primary);
+        transform: scale(1.4)
+    }
 </style>
