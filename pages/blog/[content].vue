@@ -40,7 +40,7 @@ useHead({
         </div>
     </div>
     <div v-else>
-        
+        <p>oWo</p>
     </div>
 </template>
   
