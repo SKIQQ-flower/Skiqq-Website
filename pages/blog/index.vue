@@ -1,3 +1,7 @@
+<script setup>
+    const { data: navigation } = await useAsyncData('navigation', () => fetchContentNavigation())
+</script>
+
 <template>
-    <p>oWo</p>
+    <p>{{ navigation }}</p>
 </template>
