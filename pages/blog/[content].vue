@@ -33,7 +33,7 @@ useHead({
             term="Welcome to giscus!"
             reactionsenabled="1"
             emitmetadata="0"
-            inputposition="bottom"
+            inputposition="top"
             theme="preferred_color_scheme"
             lang="en"
             loading="lazy"/>
