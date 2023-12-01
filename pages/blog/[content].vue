@@ -4,7 +4,6 @@ import Giscus from '@giscus/vue';
 const route = useRoute()
 const { data } = await useAsyncData('home', () => queryContent(route.params).findOne())
 const locale = useBrowserLocale()
-console.log(route.params)
 useContentHead(data)
 const { t } = useI18n()
 useHead({
@@ -12,7 +11,6 @@ useHead({
       return titleChunk ? `${t(titleChunk)} - ${t('blog_name')}` : `${t('blog_name')}`;
   },
 })
-
 </script>
 
 <template>
@@ -38,9 +36,6 @@ useHead({
             lang="en"
             loading="lazy"/>
         </div>
-    </div>
-    <div v-else>
-        <p>oWo</p>
     </div>
 </template>
   
