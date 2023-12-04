@@ -3,7 +3,7 @@ import { DateTime } from "luxon";
 import Giscus from '@giscus/vue';
 const route = useRoute()
 const { data } = await useAsyncData('home', () => queryContent(route.params).findOne())
-const locale = useBrowserLocale()
+const { locale } = useI18n()
 useContentHead(data)
 const { t } = useI18n()
 useHead({
@@ -31,9 +31,9 @@ useHead({
             term="Welcome to giscus!"
             reactionsenabled="1"
             emitmetadata="0"
+            theme="/custom-giscus-theme.css"
             inputposition="top"
-            theme="preferred_color_scheme"
-            lang="en"
+            :lang="locale.split('-')[0]"
             loading="lazy"/>
         </div>
     </div>
@@ -41,9 +41,28 @@ useHead({
   
 
 <style>
-    .gsc-main {
-        gap: 1rem
-    }
+    .gsc-reactions-count {
+  display: none;
+}
+.gsc-comments > .gsc-header {
+  order: 1;
+}
+.gsc-comments > .gsc-comment-box {
+  margin-bottom: 1rem;
+  order: 2;
+}
+.gsc-comments > .gsc-timeline {
+  order: 3;
+}
+.gsc-timeline {
+  flex-direction: column-reverse;
+}
+.gsc-header {
+  padding-bottom: 1rem;
+}
+.gsc-homepage-bg {
+  background-color: #15202b;
+}
 
     .comments {
         width: 80%
