@@ -15,6 +15,7 @@ useHead({
 
 <template>
     <div v-if="$route.params" class="center">
+        <Login/>
         <ContentRenderer class="card-vertical blog" :value="data" />
         <div class="blogfooter">
             <NuxtImg style="border-radius: 50%;" :src="data.authorpfp" width="40"/>
@@ -31,7 +32,7 @@ useHead({
             term="Welcome to giscus!"
             reactionsenabled="1"
             emitmetadata="0"
-            theme="/custom-giscus-theme.css"
+            themeURL="preferred_color_scheme"
             inputposition="top"
             :lang="locale.split('-')[0]"
             loading="lazy"/>
@@ -41,29 +42,6 @@ useHead({
   
 
 <style>
-    .gsc-reactions-count {
-  display: none;
-}
-.gsc-comments > .gsc-header {
-  order: 1;
-}
-.gsc-comments > .gsc-comment-box {
-  margin-bottom: 1rem;
-  order: 2;
-}
-.gsc-comments > .gsc-timeline {
-  order: 3;
-}
-.gsc-timeline {
-  flex-direction: column-reverse;
-}
-.gsc-header {
-  padding-bottom: 1rem;
-}
-.gsc-homepage-bg {
-  background-color: #15202b;
-}
-
     .comments {
         width: 80%
     }

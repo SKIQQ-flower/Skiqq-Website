@@ -11,6 +11,12 @@
     align-items: center;
 }
 
+dialog {
+  color: inherit;
+  border: none;
+  
+}
+
 .card-vertical:hover, .card-horizontal:hover, .footer:hover,
 .card-vertical:focus, .card-horizontal:focus, .footer:focus {
   transition: border .2s;

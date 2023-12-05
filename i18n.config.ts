@@ -26,12 +26,14 @@ export default defineI18nConfig(() => ({
       social_media: "Redes Sociais",
       view_gallery: "Ver galeria",
       blog_name: "Blog do Skiqq",
+      login_title: "Quer comentar nos posts, não é mesmo?",
       bodedope_gallery: "Galeria do Bodedope",
       home_page_description: "Skiqq é um programador, designer, pixel artista e desenvolvedor de jogos."
     },
     "en-US": {
       bodedope_gallery: "Bodedope's gallery",
       blog_name: "Skiqq's Blog",
+      login_title: "You want to comment in my posts, dont you?",
       social_media: "Social Media",
       at_time_blog: "at",
       view_gallery: "View gallery",

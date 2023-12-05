@@ -12,16 +12,19 @@
     "devDependencies": {
         "@nuxt/devtools": "latest",
         "@nuxtjs/i18n": "^8.0.0-rc.5",
+        "@nuxtjs/supabase": "^1.1.4",
         "nuxt": "^3.8.0",
         "vue": "^3.3.7",
         "vue-router": "^4.2.5"
     },
     "dependencies": {
         "@giscus/vue": "^2.3.0",
+        "@lottiefiles/vue-lottie-player": "^1.1.0",
         "@nuxt/content": "^2.9.0",
         "@nuxt/image": "^1.0.0",
         "@nuxtjs/color-mode": "^3.3.0",
         "luxon": "^3.4.4",
+        "next-auth": "^4.21.1",
         "nuxt-icon": "^0.6.1"
     }
 }

@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/i18n',
     '@nuxt/image',
-    '@nuxt/content'
+    '@nuxt/content',
   ],
   i18n: {
     detectBrowserLanguage: {

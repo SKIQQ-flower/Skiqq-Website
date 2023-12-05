@@ -18,17 +18,19 @@
 <template>
     <transition name="modal-fade">
         <div v-if="visible" class="backdrop" @click.self="$emit('close')">
-            <div class="popup">
+            <dialog class="popup">
                 <div class="actions">
                     <div @click="$emit('close')" class="action-btn">
                         <Icon ref="close" name="material-symbols:close"/>
                     </div>
                 </div>
-                <h2 class="popupTitle">{{ props.title }}</h2>
-                <div v-if="props.type == 'gallery'" class="gallery">
-                    <NuxtImg loading="lazy" :src="image" quality="30" format="webp" v-for="image in props.images"/>
+                <div class="popupBody">
+                    <h2 class="popupTitle">{{ props.title }}</h2>
+                    <div v-if="props.type == 'gallery'" class="gallery">
+                        <NuxtImg loading="lazy" :src="image" quality="30" format="webp" v-for="image in props.images"/>
+                    </div>
                 </div>
-            </div>
+            </dialog>
         </div>
     </transition>
 </template>
@@ -66,11 +68,19 @@
 </style>
 
 <style scoped>
+    .popupBody {
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+    }
+
     .popupTitle {
         background-color: var(--border);
         max-width: 100%;
-        padding: 5px;
+        padding: 5px 10px;
         border-radius: 15px;
+        text-align: center;
     }
 
     .action-btn {
@@ -79,7 +89,8 @@
         border: 2px solid var(--border);
         background: var(--background);
         box-sizing: border-box;
-        left: 15px;
+        left: 31px;
+        top: -15px;
         position: relative;
         z-index: 2;
         display: flex;
