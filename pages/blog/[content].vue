@@ -11,31 +11,18 @@ useHead({
       return titleChunk ? `${t(titleChunk)} - ${t('blog_name')}` : `${t('blog_name')}`;
   },
 })
+const popupActive = ref(true)
+
 </script>
 
 <template>
-    <div v-if="$route.params" class="center">
-        <Login/>
+    <popup @close="popupActive = !popupActive" title="" type="login" :visible="popupActive" />
+    <Login ref="login"/>
+    <div class="center">
         <ContentRenderer class="card-vertical blog" :value="data" />
         <div class="blogfooter">
             <NuxtImg style="border-radius: 50%;" :src="data.authorpfp" width="40"/>
             <p><strong>{{ data.author }}</strong> {{ $t('at_time_blog') }} {{ DateTime.fromISO(data.date).setLocale(locale).toLocaleString(DateTime.DATETIME_MED) }}</p>
-        </div>
-        <div class="comments">
-            <Giscus
-            id="comments"
-            repo="SKIQQ-flower/Skiqq-Website"
-            repoid="R_kgDOKeaulQ"
-            category="General"
-            categoryid="DIC_kwDOKeaulc4CbYDT"
-            mapping="pathname"
-            term="Welcome to giscus!"
-            reactionsenabled="1"
-            emitmetadata="0"
-            themeURL="preferred_color_scheme"
-            inputposition="top"
-            :lang="locale.split('-')[0]"
-            loading="lazy"/>
         </div>
     </div>
 </template>

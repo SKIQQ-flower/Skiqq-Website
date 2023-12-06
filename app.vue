@@ -19,16 +19,6 @@ useHead({
         href: '/svg/bodedope icon.svg'
       }
   ],
-  script: [
-    { src: 'https://giscus.app/client.js', 'data-repo': 
-    'SKIQQ-flower/Skiqq-Website', 'data-repo-id': 'R_kgDOKeaulQ', 
-    'data-category': 'General', 'data-category-id': 'DIC_kwDOKeaulc4CbYDT', 
-    'data-mapping': 'pathname', 'data-strict': '0', 'data-reactions-enabled': '1',
-    'data-emit-metadata': '0', 'data-input-position': 'bottom',
-    'data-theme': 'preferred_color_scheme', 'data-lang': 'en',
-    'crossorigin': 'anonymous', 'async': ''
-   }
-  ],
   meta: [
     { name: 'description', content: 'O bode mais fofo do universo!' },
     { name: 'keywords', content: 'vue, nuxt, javascript, autismo, autism, skiqq' },

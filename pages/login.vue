@@ -10,7 +10,12 @@
 }
 
 .login-dialog h3 {
-    color: inherit
+    color: 
+}
+
+dialog {
+    color: inherit;
+    border: none
 }
 </style>
 

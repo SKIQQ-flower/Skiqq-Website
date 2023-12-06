@@ -25,9 +25,16 @@
                     </div>
                 </div>
                 <div class="popupBody">
-                    <h2 class="popupTitle">{{ props.title }}</h2>
+                    <h2 v-if="props.type == 'gallery'" class="popupTitle">{{ props.title }}</h2>
                     <div v-if="props.type == 'gallery'" class="gallery">
                         <NuxtImg loading="lazy" :src="image" quality="30" format="webp" v-for="image in props.images"/>
+                    </div>
+                    <div v-if="props.type == 'login'" class="login">
+                        <img src="/svg/boykisser.svg"/>
+                        <div>
+                            <h3>{{ $t('login_title') }}</h3>
+                            <p>ceira do sinas</p>
+                        </div>
                     </div>
                 </div>
             </dialog>
@@ -68,6 +75,10 @@
 </style>
 
 <style scoped>
+    .login {
+        display: flex;
+    }
+
     .popupBody {
         gap: 10px;
         display: flex;
@@ -140,8 +151,7 @@
 
     .popup {
         background-color: var(--background);
-        width: 90%;
-        max-height: 90%;
+        max-width: 90%;
         margin-top: 0.5rem;
         border-radius: 20px;
         display: flex;

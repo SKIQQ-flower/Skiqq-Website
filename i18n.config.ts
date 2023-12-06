@@ -4,7 +4,7 @@ export default defineI18nConfig(() => ({
     "pt-BR": {
       button_source_code: 'Código Fonte',
       quote: 'O bode mais fofo do globo terrestre!',
-      role_programmer: "Programador Frontend & Backend",
+      role_programmer: "Desenvolvedor Fullstack",
       role_pixel_artist: "Pixel Artista",
       role_autist: "Autista",
       title_i_am: "Eu sou",
@@ -39,7 +39,7 @@ export default defineI18nConfig(() => ({
       view_gallery: "View gallery",
       button_source_code: 'Source Code',
       quote: 'The world\'s cutest goat!',
-      role_programmer: "Frontend & Backend Programmer",
+      role_programmer: "Fullstack Developer",
       role_pixel_artist: "Pixel Artist",
       role_autist: "Autistic",
       title_i_am: "I am",
