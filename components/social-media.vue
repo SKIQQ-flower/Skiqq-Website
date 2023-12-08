@@ -1,7 +1,7 @@
 <template>
     <div class="card-vertical appear">
         <h2>{{ $t('social_media') }}</h2>
-        <div class="horizontal-flex">
+        <div class="horizontal-flex wrap-flex">
             <a href="https://x.com/skiqq_">
                 <role icon="simple-icons:x">@skiqq_</role>
             </a>

@@ -152,6 +152,7 @@
     .popup {
         background-color: var(--background);
         max-width: 90%;
+        max-height: 90%;
         margin-top: 0.5rem;
         border-radius: 20px;
         display: flex;

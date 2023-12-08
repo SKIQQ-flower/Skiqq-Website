@@ -11,6 +11,10 @@
     align-items: center;
 }
 
+.wrap-flex {
+  flex-wrap: wrap;
+}
+
 dialog {
   color: inherit;
   border: none;
