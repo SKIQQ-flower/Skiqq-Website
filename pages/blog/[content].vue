@@ -1,7 +1,7 @@
 <script setup>
 import { DateTime } from "luxon";
 const route = useRoute()
-const { data } = await useAsyncData('home', () => queryContent(route.path).findOne())
+const { data } = await useAsyncData('home', () => queryContent('/').findOne())
 const { locale } = useI18n()
 const { t } = useI18n()
 useContentHead(data)
@@ -24,7 +24,6 @@ const popupActive = ref(true)
 
 <template>
     <popup @close="popupActive = !popupActive" title="" type="login" :visible="popupActive" />
-    <Login ref="login"/>
     <div class="center">
         <NuxtImg class="blog-cover" :src="data.cover"/>
         <h2 class="blog-title">{{ data.title }}</h2>
