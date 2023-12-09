@@ -6,6 +6,8 @@ const { data } = await useAsyncData('home', () => queryContent(route.params.id).
 if (data && data.value) {
     useSeoMeta({
         ogTitle: data.value.title,
+        ogType: "website",
+        twitterImage: data.value.cover,
         description: data.value.description,
         ogDescription: data.value.description,
         ogImage: {
