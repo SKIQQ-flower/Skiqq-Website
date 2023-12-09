@@ -15,6 +15,8 @@ export default defineNuxtConfig({
       redirectOn: 'root',  // recommended
     },
     baseUrl: 'https://skiqq.vercel.app',
+    strategy: 'prefix_except_default',
+    defaultLocale: 'en-US',
     locales: [
       {
         code: 'en-US',
