@@ -11,6 +11,15 @@ useHead({
       return titleChunk ? `${t(titleChunk)} - ${t('blog_name')}` : `${t('blog_name')}`;
   },
 })
+
+useSeoMeta({
+  ogTitle: data.title,
+  description: data.description,
+  ogDescription: data.description,
+  ogImage: data.cover,
+  twitterCard: data.cover,
+  articleAuthor: data.author
+})
 const popupActive = ref(true)
 
 </script>
@@ -19,6 +28,8 @@ const popupActive = ref(true)
     <popup @close="popupActive = !popupActive" title="" type="login" :visible="popupActive" />
     <Login ref="login"/>
     <div class="center">
+        <NuxtImg class="blog-cover" :src="data.cover"/>
+        <h2 class="blog-title">{{ data.title }}</h2>
         <ContentRenderer class="card-vertical blog" :value="data" />
         <div class="blogfooter">
             <NuxtImg style="border-radius: 50%;" :src="data.authorpfp" width="40"/>
@@ -29,6 +40,14 @@ const popupActive = ref(true)
   
 
 <style>
+    .blog-title {
+        width: 100%
+    }
+
+    .blog-cover {
+        border-radius: 20px
+    }
+
     .comments {
         width: 80%
     }

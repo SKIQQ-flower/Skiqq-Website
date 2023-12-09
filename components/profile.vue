@@ -51,14 +51,12 @@
 
     .profile img {
         border-radius: 10px;
-        height: 20em;
+        width: 20em;
         flex-shrink: 0;
     }
 
     @media only screen and (max-width: 768px) {
         .profile img {
-            height: 100%;
-            object-fit: contain;
             width: 100%;
         }
 

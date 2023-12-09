@@ -5,10 +5,10 @@
     border: 2px solid var(--border);
     border-radius: 30px;
     padding: 20px;
-    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .wrap-flex {
@@ -18,7 +18,6 @@
 dialog {
   color: inherit;
   border: none;
-  
 }
 
 .card-vertical:hover, .card-horizontal:hover, .footer:hover,
@@ -32,7 +31,7 @@ dialog {
     border: 2px solid var(--border);
     border-radius: 30px;
     padding: 20px;
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -80,6 +79,7 @@ a:hover .role {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
   }
 }
 
@@ -150,7 +150,10 @@ body {
 
 main {
   flex: 1 0 auto;
-  margin: 10px
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1,h2,h3,h4,h5,h6,p,span {
@@ -194,6 +197,7 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  width: 80%
 }
 
 .dark-mode {

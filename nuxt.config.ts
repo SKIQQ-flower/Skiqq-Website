@@ -26,7 +26,7 @@ export default defineNuxtConfig({
         isCatchallLocale: true
       }
     ],
-    defaultLocale: 'en-US',
+    defaultLocale: 'en',
     vueI18n: './i18n.config.ts' // if you are using custom path, default 
   },
   image: {

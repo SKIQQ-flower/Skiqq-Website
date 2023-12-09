@@ -25,6 +25,7 @@
         "@nuxtjs/color-mode": "^3.3.0",
         "luxon": "^3.4.4",
         "next-auth": "^4.21.1",
-        "nuxt-icon": "^0.6.1"
+        "nuxt-icon": "^0.6.1",
+        "sitemap": "^7.1.1"
     }
 }
