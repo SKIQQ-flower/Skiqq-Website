@@ -10,7 +10,6 @@ useHead({
       return titleChunk ? `${t(titleChunk)} - ${t('blog_name')}` : `${t('blog_name')}`;
   },
 })
-console.log(data)
 useSeoMeta({
   ogTitle: data.value.title,
   description: data.value.description,
