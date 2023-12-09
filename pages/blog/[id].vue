@@ -1,7 +1,7 @@
 <script setup>
 import { DateTime } from "luxon";
 const route = useRoute()
-const { data } = await useAsyncData('home', () => queryContent('/').findOne())
+const { data } = await useAsyncData('home', () => queryContent(route.params.id).findOne())
 const { locale } = useI18n()
 const { t } = useI18n()
 useContentHead(data)
