@@ -14,11 +14,14 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',  // recommended
     },
+    strategy: 'prefix_except_default',
+    defaultLocale: 'en-US',
     baseUrl: 'https://skiqq.vercel.app',
     locales: [
       {
-        code: 'en',
+        code: 'en-US',
         iso: 'en-US',
+        isCatchallLocale: true
       }, 
       {
         code: 'pt-BR',
@@ -26,7 +29,6 @@ export default defineNuxtConfig({
         isCatchallLocale: true
       }
     ],
-    defaultLocale: 'en',
     vueI18n: './i18n.config.ts' // if you are using custom path, default 
   },
   image: {

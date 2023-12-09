@@ -27,6 +27,7 @@ const popupActive = ref(true)
     <div class="center">
         <NuxtImg class="blog-cover" :src="data.cover"/>
         <h2 class="blog-title">{{ data.title }}</h2>
+        
         <ContentRenderer class="card-vertical blog" :value="data" />
         <div class="blogfooter">
             <NuxtImg style="border-radius: 50%;" :src="data.authorpfp" width="40"/>
