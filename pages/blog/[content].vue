@@ -18,7 +18,7 @@ useSeoMeta({
   ogDescription: data.description,
   ogImage: data.cover,
   twitterCard: data.cover,
-  articleAuthor: data.author
+  author: data.author
 })
 const popupActive = ref(true)
 
