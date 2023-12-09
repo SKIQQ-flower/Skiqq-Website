@@ -3,21 +3,21 @@ import { DateTime } from "luxon";
 const route = useRoute()
 const { data } = await useAsyncData('home', () => queryContent(route.params).findOne())
 const { locale } = useI18n()
-useContentHead(data)
 const { t } = useI18n()
+useContentHead(data)
 useHead({
   titleTemplate: (titleChunk) => {
       return titleChunk ? `${t(titleChunk)} - ${t('blog_name')}` : `${t('blog_name')}`;
   },
 })
-
+console.log(data)
 useSeoMeta({
-  ogTitle: data.title,
-  description: data.description,
-  ogDescription: data.description,
-  ogImage: data.cover,
-  twitterCard: data.cover,
-  author: data.author
+  ogTitle: data.value.title,
+  description: data.value.description,
+  ogDescription: data.value.description,
+  ogImage: data.value.cover,
+  twitterCard: data.value.cover,
+  author: data.value.author,
 })
 const popupActive = ref(true)
 
