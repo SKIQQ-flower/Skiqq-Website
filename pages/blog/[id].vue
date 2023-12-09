@@ -10,7 +10,6 @@ if (data && data.value) {
         twitterImage: data.value.cover,
         description: data.value.description,
         ogDescription: data.value.description,
-        og: "http://ogp.me/ns#",
         ogImage: {
             url: data.value.cover,
             width: '1200'
