@@ -1,0 +1,1 @@
+import{k as o,c as t,e as n,t as s,b as a}from"./entry.2fd775fc.js";const l={},_={class:"login-dialog",open:""};function c(e,i){return a(),t("dialog",_,[n("h3",null,s(e.$t("login_title")),1)])}const d=o(l,[["render",c]]);export{d as default};
