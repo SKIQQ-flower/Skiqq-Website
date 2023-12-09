@@ -1,6 +1,5 @@
 <script setup>
 import { DateTime } from "luxon";
-import Giscus from '@giscus/vue';
 const route = useRoute()
 const { data } = await useAsyncData('home', () => queryContent(route.params).findOne())
 const { locale } = useI18n()
