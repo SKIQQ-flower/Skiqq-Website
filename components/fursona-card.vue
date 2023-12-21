@@ -1,20 +1,18 @@
 <template>
-    <div class="fursona-card card-vertical appear">
-        <div class="fursona-details">
-            <div class="fursona">
-                <NuxtImg preload src="/img/Fursona/em pé.png" alt="Fursona"/>
-            </div>
-            <div><h2>Bodedope</h2>
-                <h3>{{ $t('appearance') }}</h3>
-                <p>{{  $t('appearance_label') }}</p>
-                <h3>{{ $t('likes') }}</h3>
-                <p>{{ $t('likes_label') }}</p>
-                <h3>{{ $t('dislikes') }}</h3>
-                <p>{{ $t('dislikes_label') }}</p>
-                <h3>{{ $t('descriptions') }}</h3>
-                <p>{{ $t('description_label') }}</p>
-                <button class="button-primary" @click="$emit('view-gallery')">{{ $t('view_gallery') }}</button>
-            </div>
+    <div class="w-11/12 flex m-4 dark:bg-gray-800/20  bg-gray-300/40 z-10 bg-gray-300 p-5 flex-col sm:flex-row items-center rounded-3xl
+    hover:outline-2 relative hover:outline-gray-500 outline-gray-600 outline transition-all outline-1">
+        <NuxtImg width="300" preload src="/img/Fursona/em pé.png" alt="Fursona"/>
+        <div>
+            <h2>Bodedope</h2>
+            <h3>{{ $t('appearance') }}</h3>
+            <p>{{  $t('appearance_label') }}</p>
+            <h3>{{ $t('likes') }}</h3>
+            <p>{{ $t('likes_label') }}</p>
+            <h3>{{ $t('dislikes') }}</h3>
+            <p>{{ $t('dislikes_label') }}</p>
+            <h3>{{ $t('descriptions') }}</h3>
+            <p>{{ $t('description_label') }}</p>
+            <button class="button-primary" @click="$emit('view-gallery')">{{ $t('view_gallery') }}</button>
         </div>
     </div>
 </template>

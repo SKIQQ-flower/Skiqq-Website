@@ -1,7 +1,8 @@
 <template>
-    <div class="card-vertical appear">
+    <div class="flex m-4 dark:bg-gray-800/20 bg-gray-300/40 p-5 flex-col items-center rounded-3xl
+        w-11/12 hover:outline-2 hover:outline-gray-500 outline-gray-600 transition-all outline outline-1">
         <h2>{{ $t('social_media') }}</h2>
-        <div class="horizontal-flex wrap-flex">
+        <div class="gap-1 flex flex-row flex-wrap justify-center">
             <a href="https://x.com/skiqq_">
                 <role icon="simple-icons:x">@skiqq_</role>
             </a>
@@ -22,8 +23,7 @@
 </template>
 
 <style>
-    a {
-        text-decoration: none;
-        color: inherit
+    a:hover div {
+        @apply dark:bg-gray-800 bg-gray-400
     }
 </style>

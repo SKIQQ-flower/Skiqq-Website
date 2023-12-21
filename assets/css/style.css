@@ -1,86 +1,11 @@
-
 @import url('https://fonts.googleapis.com/css?family=Fredoka:700|Noto Sans:400');
-.card-vertical {
-    background-color: var(--surface);
-    border: 2px solid var(--border);
-    border-radius: 30px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
 
-.wrap-flex {
-  flex-wrap: wrap;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-dialog {
-  color: inherit;
-  border: none;
-}
-
-.card-vertical:hover, .card-horizontal:hover, .footer:hover,
-.card-vertical:focus, .card-horizontal:focus, .footer:focus {
-  transition: border .2s;
-  border: 2px solid var(--accent)
-}
-
-.card-horizontal {
-    background-color: var(--surface);
-    border: 2px solid var(--border);
-    border-radius: 30px;
-    padding: 20px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.horizontal-flex {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 2px
-}
-
-.vertical-flex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px
-}
-
-a:hover .role {
-  transform: scale(1.2);
-  filter: drop-shadow(0px 0px 10px #000000);
-  position: relative;
-}
-
-.role {
-  background-color: var(--surface);
-  transition: all 0.2s;
-}
-
-@media only screen and (min-width: 768px) {
-    @supports (animation-timeline: view(block)) {
-        .appear {
-          animation: appear .5s linear;
-          animation-timeline: view(block) !important;
-          animation-range: cover 0% cover 100%;
-        }
-    }
-}
-
-@media only screen and (max-width: 768px) {
-  .horizontal-flex, .card-horizontal {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-  }
+a, a:link, a:visited {
+  @apply no-underline text-slate-50 transition-all hover:scale-125
 }
 
 @keyframes appear {
@@ -107,14 +32,24 @@ a:hover .role {
 
 .button-secondary {
   background-color: var(--secondary);
+  color: var(--text)
+}
+
+.discord-button {
+  background-color: #5865f2;
+  color: var(--text)
 }
 
 button {
-  padding: 0.5em;
+  display: flex;
+  padding: 0.3em;
   border-radius: 10px;
   font-size: 1.3em;
+  color: var(--background);
   border: none;
-  background-color: var(--accent);
+  gap: 5px;
+  align-items: center;
+  background-color: var(--primary);
 }
 
 .button-primary {
@@ -136,7 +71,9 @@ body {
 #__nuxt {
   display: flex;
   flex-direction: column;
-  min-height: 100dvh;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
 }
 
 html, body {
@@ -146,15 +83,16 @@ html, body {
 body {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 main {
   flex: 1 0 auto;
-  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 
 h1,h2,h3,h4,h5,h6,p,span {
   margin: 0
@@ -184,6 +122,12 @@ h5 {font-size: 1.333rem; /* 21.28px */}
 
 small {font-size: 0.750rem; /* 12px */}
 
+a, a:link, a:visited {
+  text-decoration: none;
+  color: var(--text);
+  transition: all 0.2s
+}
+
 img {
   user-select: none;
   -moz-user-select: none;
@@ -192,32 +136,11 @@ img {
   -ms-user-select: none;
 }
 
-.center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 80%
-}
-
-.dark-mode {
-  --text: #f1e0fa;
-  --background: #0c0311;
-  --primary: #bf9ad5;
-  --secondary: #151018;
-  --accent: #816293;
-  --surface: #261a2e;
-  --surface2: color-mix(in srgb, var(--surface) 50%, transparent);
-  --border: rgb(191 154 213 / 5%)
-}
-
-.light-mode {
-  --text: #16051f;
-  --background: #f7eefc;
-  --primary: #4f2a65;
-  --secondary: #ece7ef;
-  --accent: #8b6c9d;;
-  --surface: rgb(79 42 101 / 15%);
-  --surface2: color-mix(in srgb, var(--surface) 50%, transparent);
-  --border: rgb(79 42 101 / 5%);
+@layer theme {
+  .dark {
+    @apply text-slate-50 bg-gray-950;
+  }
+  .light {
+    @apply text-gray-900 bg-zinc-100
+  }
 }

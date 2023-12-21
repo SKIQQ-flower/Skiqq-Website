@@ -1,4 +1,5 @@
 <script setup>
+    const supabase = useSupabaseClient()
     const props = defineProps({
         title: {
             type: String,
@@ -13,11 +14,19 @@
             type: Boolean,
         },
     })
+
+    async function signInWithDiscord() {
+        const { data, error } = await supabase.auth.signInWithOAuth({
+            provider: 'discord',
+        })
+    }
+
+
 </script>
 
 <template>
     <transition name="modal-fade">
-        <div v-if="visible" class="backdrop" @click.self="$emit('close')">
+        <div v-if="visible" @keyup.esc="$emit('close')" class="backdrop" @click.self="$emit('close')">
             <dialog class="popup">
                 <div class="actions">
                     <div @click="$emit('close')" class="action-btn">
@@ -31,9 +40,9 @@
                     </div>
                     <div v-if="props.type == 'login'" class="login">
                         <img src="/svg/boykisser.svg"/>
-                        <div>
+                        <div class="login-body">
                             <h3>{{ $t('login_title') }}</h3>
-                            <p>ceira do sinas</p>
+                            <button @click.native="signInWithDiscord" class="discord-button"><Icon name="ic:baseline-discord" size="1.5em"/>Entrar com o Discord</button>
                         </div>
                     </div>
                 </div>
@@ -75,6 +84,12 @@
 </style>
 
 <style scoped>
+    .login-body {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
     .login {
         display: flex;
     }
