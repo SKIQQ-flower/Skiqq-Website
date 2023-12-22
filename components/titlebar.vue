@@ -9,7 +9,7 @@
             <img src="/svg/bodedope icon.svg" width="50em">
             <h3>Skiqq Website</h3>
         </div>
-        <div class="titlebarbuttons">
+        <div class="">
             <a class="hover:text-yellow-400" href="https://github.com/SKIQQ-flower/Skiqq-Website"><Icon class="hover-icon" name="mdi:github" size="2em"/></a>
             <button v-if="user" class="accountAvatar">
                 <NuxtImg width="35" :src="user.user_metadata.avatar_url"/>

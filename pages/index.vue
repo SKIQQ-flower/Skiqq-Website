@@ -1,5 +1,4 @@
 <template>
-  <popup title="test title">test label</popup>
   <div class="flex flex-col items-center">
     <div class="relative flex flex-col items-center w-full">
       <div class="bg-gradient-radial absolute z-[-1] left-[-5rem] top-[-10rem] w-[20rem] h-[20rem] dark:from-purple-900
@@ -22,7 +21,6 @@
       <div class="bg-gradient-radial absolute z-[-1] right-[0rem] bottom-[-10rem] w-[20rem] h-[20rem] sm:from-transparent from-purple-500 dark:from-purple-900 blur-2xl"></div>
     </div>
   </div>
-  <button @click="openPopup">Open Popup</button>
 </template>
 
 <script setup>

@@ -29,9 +29,11 @@ useHead({
 <template>
   <Html :lang="locale" :dir="head.htmlAttrs.dir">
     <Body>
-      <titlebar/>
-      <NuxtPage/>
-      <simple-footer/>
+      <Titlebar/>
+      <main>
+        <NuxtPage/>
+      </main>
+      <SimpleFooter/>
     </Body>
   </Html>
 </template>
