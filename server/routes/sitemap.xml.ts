@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
 
   for (const doc of docs) {
     sitemap.write({
-      url: `blog/${doc._path}`,
+      url: `blog${doc._path}`,
       changefreq: 'monthly'
     })
   }
