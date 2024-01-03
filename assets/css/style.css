@@ -5,7 +5,19 @@
 @tailwind utilities;
 
 a, a:link, a:visited {
-  @apply no-underline text-slate-50 transition-all hover:scale-125
+  @apply no-underline text-slate-50 transition-all
+}
+
+.linkbutton {
+  @apply hover:scale-125
+}
+
+body {
+  cursor: url('/pointers/pointer.png'), auto;
+}
+
+a, button {
+  cursor: url('/pointers/select.png'), auto;
 }
 
 @keyframes appear {
@@ -64,14 +76,10 @@ body {
 main {
   flex: 1 0 auto;
   min-height: 100%;
+  min-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-
-h1,h2,h3,h4,h5,h6,p,span {
-  margin: 0
 }
 
 body {
@@ -98,25 +106,19 @@ h5 {font-size: 1.333rem; /* 21.28px */}
 
 small {font-size: 0.750rem; /* 12px */}
 
-a, a:link, a:visited {
-  text-decoration: none;
-  color: var(--text);
-  transition: all 0.2s
-}
-
-img {
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-}
-
 @layer theme {
   .dark {
-    @apply text-slate-50 bg-gray-950;
+    --bg: theme(colors.gray.950);
+    --text: theme(colors.slate.50);
+    --surface: theme(colors.gray.900);
+    --border: theme(colors.gray.800);
+    @apply bg-bg text-text
   }
   .light {
-    @apply text-gray-900 bg-zinc-100
+    --bg: theme(colors.zinc.100);
+    --text: theme(colors.slate.900);
+    --surface: theme(colors.gray.300);
+    --border: theme(colors.gray.400);
+    @apply bg-bg text-text
   }
 }

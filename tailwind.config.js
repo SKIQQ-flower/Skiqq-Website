@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const colors = require("tailwindcss/colors")
 module.exports = {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -16,7 +17,13 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops) 100%, transparent)'
-      }
+      },
+      colors: {
+        'bg': 'var(--bg)',
+        'text': 'var(--text)',
+        'surface': 'var(--surface)',
+        'border': 'var(--border)'
+      },
     }
   }
 }

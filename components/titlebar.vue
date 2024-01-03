@@ -4,7 +4,7 @@
 </script>
 
 <template>
-    <div class="dark:bg-gray-800/20  bg-gray-300/40 z-10 relative w-full flex flex-nowrap justify-between px-5 rounded-b-3xl border-b border-gray-600">
+    <div class="dark:bg-gray-800/20 bg-gray-300/40 z-10 relative w-full flex flex-nowrap justify-between px-5 rounded-b-3xl border-b-2 border-gray-700/70">
         <div class="titlebartitle">
             <img src="/svg/bodedope icon.svg" width="50em">
             <h3>Skiqq Website</h3>

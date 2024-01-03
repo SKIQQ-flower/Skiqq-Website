@@ -1,12 +1,13 @@
 <script setup>
+const route = useRoute()
 const { t, locale } = useI18n()
+const showTitlebar = route.meta.titlebar ?? true
+const showNavbar = route.meta.navbar ?? true
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',
   addSeoAttributes: true,
-  
 })
-
 
 useHead({
   titleTemplate: (titleChunk) => {
@@ -29,11 +30,11 @@ useHead({
 <template>
   <Html :lang="locale" :dir="head.htmlAttrs.dir">
     <Body>
-      <Titlebar/>
+      <Titlebar v-if="showTitlebar"/>
       <main>
         <NuxtPage/>
       </main>
-      <SimpleFooter/>
+      <SimpleFooter v-if="showNavbar"/>
     </Body>
   </Html>
 </template>
