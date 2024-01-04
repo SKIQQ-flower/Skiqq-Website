@@ -6,8 +6,22 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/i18n',
     '@nuxt/image',
+    '@vueuse/nuxt',
     '@nuxt/content',
+    '@nuxtjs/supabase'
   ],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+  colorMode: {
+    classSuffix: '',
+  },
+  supabase: {
+    redirect: false
+  },
   i18n: {
     detectBrowserLanguage: {
       useCookie: true,

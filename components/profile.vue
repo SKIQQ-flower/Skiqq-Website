@@ -1,19 +1,23 @@
 <template>
-    <div class="profile card-horizontal appear">
-        <NuxtImg src="/img/Fursona/pfp.jpg" alt="Foto de perfil"/>
-        <div class="quote">
+    <div class="flex m-4 relative dark:bg-gray-800/20  bg-gray-300/40 p-5 flex-col sm:flex-row items-center rounded-3xl
+        w-11/12 transition-all">
+        <NuxtImg width="450" class="rounded-2xl max-h-full" src="/img/Fursona/pfp.jpg" alt="Foto de perfil"/>
+        <div class="flex flex-col items-center">
             <h2>Skiqq</h2>
             <p>{{ $t('quote') }}</p>
             <h3>{{ $t('title_i_am') }}</h3>
-            <div class="roles">
+            <div class="flex flex-wrap gap-1.5 justify-center w-9/12">
                 <Role icon="noto:man-technologist">{{ $t('role_programmer') }}</Role>
-                <Role icon="noto:alien-monster">{{ $t('role_pixel_artist') }}</Role>
-                <Role icon="noto:video-game">Game Dev</Role>
-                <Role icon="noto:paintbrush">Thumbmaker</Role>
-                <Role icon="twemoji:infinity">{{ $t('role_autist') }}</Role>
+                <Role icon="noto:puzzle-piece">{{ $t('role_autist') }}</Role>
+            </div>
+            <h3>{{ $t('title_i_do') }}</h3>
+            <div class="flex flex-wrap gap-1.5 justify-center w-3/5">
+                <Role icon="noto:video-game">Games</Role>
+                <Role icon="noto:alien-monster">Pixel Art</Role>
+                <Role icon="noto:paintbrush">Youtube Thumbnails</Role>
             </div>
             <h3>{{ $t('title_languages_and_frameworks') }}</h3>
-            <div class="roles">
+            <div class="flex flex-wrap gap-1.5 justify-center w-3/5">
                 <Role icon="devicon:nodejs">NodeJS</Role>
                 <Role icon="logos:vue">Vue</Role>
                 <Role icon="logos:bun">Bun</Role>

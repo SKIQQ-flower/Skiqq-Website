@@ -1,8 +1,8 @@
 <script setup>
 import { DateTime } from "luxon";
 const route = useRoute()
+const user = useSupabaseUser()
 const { data } = await useAsyncData('home', () => queryContent(route.params.id).findOne())
-
 if (data && data.value) {
     useSeoMeta({
         ogTitle: data.value.title,
@@ -28,12 +28,12 @@ useHead({
       return titleChunk ? `${t(titleChunk)} - ${t('blog_name')}` : `${t('blog_name')}`;
   },
 })
-const popupActive = ref(true)
+const popupActive = ref((user == undefined || null) ? false : true)
 
 </script>
 
 <template>
-    <popup @close="popupActive = !popupActive" title="" type="login" :visible="popupActive" />
+    <popup @close="popupActive = false" title="" type="login" :visible="popupActive" />
     <div v-if="data" class="center">
         <NuxtImg class="blog-cover" :src="data.cover"/>
         <h2 class="blog-title">{{ data.title }}</h2>

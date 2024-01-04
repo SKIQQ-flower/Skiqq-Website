@@ -16,51 +16,12 @@
 </script>
 
 <template>
-    <div class="role">
-        <div class="roleIcon">
-            <Icon :name="props.icon" :color="iconColor" />
+    <div class="flex flex-nowrap dark:bg-gray-800/20  bg-gray-300/40 gap-1 p-1.5 rounded-xl border-gray-800/70 border">
+        <div class="w-6 h-6 flex rounded-full items-center" :style="{ 'background-color': props.color }">
+            <Icon class="w-6 h-6" :name="props.icon" :color="props.iconColor" />
         </div>
-        <p class="roleText">
+        <p class="whitespace-nowrap">
             <slot></slot>
         </p>
     </div>
 </template>
-
-<style>
-    .role {
-        display: flex;
-        padding: 5px;
-        border: 2px solid var(--border);
-        border-radius: 10px;
-        flex-direction: row;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .roleIcon {
-        height: 1.5em;
-        width: 1.5em;
-        background-color: v-bind(props.color);
-        border-radius: 50%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .roleIcon .icon {
-        height: 2em;
-        width: 2em
-    }
-
-    .roleText {
-        white-space: nowrap
-    }
-
-    .roleText {
-        display: flex;
-        list-style-type: none;
-        flex-direction: row;
-        align-items: center;
-        gap: 5px
-    }
-</style>
