@@ -8,8 +8,8 @@
             <Icon size="1.5rem" name="material-symbols:account-circle"/>
             Conta
           </button>
-          <NuxtLink to="/settings/ceira" class="flex items-center rounded-xl p-2 w-full gap-2 transition-all duration-300">
-            <button ref="account">
+          <NuxtLink to="/settings/ceira">
+            <button ref="account" class="flex items-center rounded-xl p-2 w-full gap-2 transition-all duration-300">
               <Icon size="1.5rem" name="material-symbols:brush"/>
               Temas
             </button>
@@ -22,9 +22,3 @@
     </div>
   </div>
 </template>
-
-<style>
-.router-link-exact-active {
-  @apply bg-purple-500
-}
-</style>

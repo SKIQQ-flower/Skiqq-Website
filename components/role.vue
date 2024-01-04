@@ -16,7 +16,7 @@
 </script>
 
 <template>
-    <div class="flex hover:bg-gray-800 hover:scale-110 transition-all duration-200 flex-nowrap dark:bg-gray-800/20  bg-gray-300/40 gap-1 p-1.5 rounded-xl border-gray-800/70 border">
+    <div class="flex flex-nowrap dark:bg-gray-800/20  bg-gray-300/40 gap-1 p-1.5 rounded-xl border-gray-800/70 border">
         <div class="w-6 h-6 flex rounded-full items-center" :style="{ 'background-color': props.color }">
             <Icon class="w-6 h-6" :name="props.icon" :color="props.iconColor" />
         </div>

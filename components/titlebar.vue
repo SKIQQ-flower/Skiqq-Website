@@ -4,23 +4,30 @@
 </script>
 
 <template>
-    <div class="dark:bg-gray-800/20 bg-gray-300/40 z-10 relative w-full flex flex-nowrap justify-between px-5 rounded-b-3xl">
+    <div class="dark:bg-gray-800/20 bg-gray-300/40 z-10 relative w-full flex flex-nowrap justify-between px-5 rounded-b-3xl border-b-2 border-gray-700/70">
         <div class="titlebartitle">
             <img src="/svg/bodedope icon.svg" width="50em">
             <h3>Skiqq Website</h3>
         </div>
-        <div class="inline-flex items-center gap-2">
+        <div class="">
             <a class="hover:text-yellow-400" href="https://github.com/SKIQQ-flower/Skiqq-Website"><Icon class="hover-icon" name="mdi:github" size="2em"/></a>
             <button v-if="user" class="accountAvatar">
                 <NuxtImg width="35" :src="user.user_metadata.avatar_url"/>
             </button>
-            <button v-else @click="" class="p-1 px-2 inline-flex border-gray-800 border rounded-full gap-1 items-center hover:bg-gray-800 hover:text-yellow-500 transition-all">
-                <Icon class="hover-icon" name="material-symbols:account-circle" size="1.8em"/>
+            <button v-else @click="" class="accountAvatar">
+                <Icon class="hover-icon" name="material-symbols:account-circle" size="1.5em"/>
                 <p>Entrar</p>
             </button>
             <button v-if="mobile">
                 <Icon name="material-symbols:menu"/>
             </button>
+        </div>
+    </div>
+    <div v-if="user" class="accountPopup card-horizontal">
+        <NuxtImg class="accountImage" width="50" :src="user.user_metadata.avatar_url"/>
+        <div class="vertical-flex">
+            <h3>{{ user.user_metadata.full_name }}</h3>
+            <p>@{{ user.user_metadata.name.split("#")[0] }}</p>
         </div>
     </div>
 </template>

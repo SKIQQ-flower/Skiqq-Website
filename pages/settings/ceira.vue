@@ -1,5 +1,5 @@
 <template>
-    <div class="overflow-auto w-11/12">
+    <div class="overflow-auto m-4 w-11/12">
       <h1 class="leading-none flex items-center gap-2"><Icon size="3.5rem" name="material-symbols:account-circle"/>Conta</h1>
       <p class="text-gray-300 p-2 rounded-xl w-full bg-surface flex items-center gap-1"><Icon size="1.5rem" name="material-symbols:info-outline"/>Como alterar o seu nome, o seu avatar ou excluir a sua conta permanentemente. OwO</p>
       <hr class="border-gray-800 my-2">

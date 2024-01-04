@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center my-5 gap-5">
+  <div class="flex flex-col items-center">
     <div class="relative flex flex-col items-center w-full">
       <div class="bg-gradient-radial absolute z-[-1] left-[-5rem] top-[-10rem] w-[20rem] h-[20rem] dark:from-purple-900
       from-purple-500 blur-2xl"></div>
