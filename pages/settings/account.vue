@@ -1,12 +1,21 @@
+<script setup>
+const supabase = useSupabaseClient()
+const user = useSupabaseUser()
+async function signin() {
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: 'discord',
+  })
+}
+</script>
+
 <template>
-    <div class="overflow-auto m-4 w-11/12">
+    <div class="overflow-auto w-full">
       <h1 class="leading-none flex items-center gap-2"><Icon size="3.5rem" name="material-symbols:account-circle"/>Conta</h1>
       <p class="text-gray-300 p-2 rounded-xl w-full bg-surface flex items-center gap-1"><Icon size="1.5rem" name="material-symbols:info-outline"/>Como alterar o seu nome, o seu avatar ou excluir a sua conta permanentemente. OwO</p>
       <hr class="border-gray-800 my-2">
-      <div class="flex justify-between items-center text-2xl bg-surface p-2 pl-4 rounded-3xl flex-nowrap">
-        <div class="w-11/12">
-          <p>Lorem ipsum</p>
-          <p class="text-sm text-balance">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus dui, varius et gravida et, aliquet vitae libero. Mauris at sodales eros, vitae tristique ipsum.</p>
+      <div v-if="user" class="flex justify-between items-center text-2xl bg-surface p-2 pl-4 rounded-3xl flex-nowrap">
+        <div>
+          <img :src="user.user_metadata.picture">
         </div>
         <label
             for="AcceptConditions"
@@ -20,6 +29,8 @@
             ></span>
         </label>
       </div>
-      
+      <div v-else>
+        <button @click="signin" class="px-6 py-3 text-lg">sign with discord</button>
+      </div>
     </div>
 </template>

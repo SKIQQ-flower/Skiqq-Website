@@ -4,19 +4,32 @@
 @tailwind components;
 @tailwind utilities;
 
-a, a:link, a:visited {
-  @apply no-underline text-slate-50 transition-all
+@layer theme {
+  .dark {
+    --bg: theme(colors.gray.950);
+    --text: theme(colors.slate.50);
+    --surface: theme(colors.gray.900);
+    --border: theme(colors.gray.800);
+    @apply bg-bg text-text
+  }
+  .light {
+    --bg: theme(colors.zinc.100);
+    --text: theme(colors.slate.900);
+    --surface: theme(colors.gray.300);
+    --border: theme(colors.gray.400);
+    @apply bg-bg text-text
+  }
 }
 
-.linkbutton {
-  @apply hover:scale-125
+a, a:link, a:visited {
+  @apply no-underline text-inherit
 }
 
 body {
   cursor: url('/pointers/pointer.png'), auto;
 }
 
-a, button {
+a, button:hover {
   cursor: url('/pointers/select.png'), auto;
 }
 
@@ -106,19 +119,3 @@ h5 {font-size: 1.333rem; /* 21.28px */}
 
 small {font-size: 0.750rem; /* 12px */}
 
-@layer theme {
-  .dark {
-    --bg: theme(colors.gray.950);
-    --text: theme(colors.slate.50);
-    --surface: theme(colors.gray.900);
-    --border: theme(colors.gray.800);
-    @apply bg-bg text-text
-  }
-  .light {
-    --bg: theme(colors.zinc.100);
-    --text: theme(colors.slate.900);
-    --surface: theme(colors.gray.300);
-    --border: theme(colors.gray.400);
-    @apply bg-bg text-text
-  }
-}
