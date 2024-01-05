@@ -29,7 +29,7 @@ body {
   cursor: url('/pointers/pointer.png'), auto;
 }
 
-a, button:hover {
+a, button:hover, .selectpointer {
   cursor: url('/pointers/select.png'), auto;
 }
 

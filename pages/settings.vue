@@ -13,7 +13,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="overflow-auto w-8/12">
         <NuxtPage/>
       </div>
     </div>
