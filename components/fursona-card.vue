@@ -1,5 +1,5 @@
 <template>
-    <div class="w-11/12 flex m-4 dark:bg-gray-800/20  bg-gray-300/40 z-10 bg-gray-300 p-5 flex-col sm:flex-row items-center rounded-3xl transition-all">
+    <div class="w-11/12 flex dark:bg-gray-800/20  bg-gray-300/40 z-10 bg-gray-300 p-5 flex-col sm:flex-row items-center rounded-3xl transition-all">
         <NuxtImg width="300" preload src="/img/Fursona/em pé.png" alt="Fursona"/>
         <div>
             <h2>Bodedope</h2>
