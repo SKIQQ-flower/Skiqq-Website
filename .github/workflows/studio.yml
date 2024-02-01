@@ -67,16 +67,13 @@ jobs:
         run: echo $'\nautoImport=true\nmodules[]=@nuxthq/studio' >> .nuxtrc
 
       - name: Generate
-        run: npx nuxi generate
+        run: npx nuxi build --preset github_pages
         env:
           NUXT_PUBLIC_STUDIO_API_URL: https://api.nuxt.studio
-          NUXT_PUBLIC_STUDIO_TOKENS: 8252fa0225f49bdf36c3dc472443685ed0b4cf28846452898a30859acafdd129
+          NUXT_PUBLIC_STUDIO_TOKENS: 72579aeef53c31afba3b26d92fa287e5204631825471a1ff96433b4c71af8541
 
 
-      - name: Add .nojekyll file
-        run: touch .output/public/.nojekyll
-
-        # Deployment job
+      # Deployment job
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
