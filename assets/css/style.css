@@ -4,21 +4,29 @@
 @tailwind components;
 @tailwind utilities;
 
+img {
+  image-rendering: pixelated;
+}
+
 @layer theme {
   .dark {
     --bg: theme(colors.gray.950);
     --text: theme(colors.slate.50);
-    --surface: theme(colors.gray.900);
-    --border: theme(colors.gray.800);
     @apply bg-bg text-text
   }
   .light {
     --bg: theme(colors.zinc.100);
     --text: theme(colors.slate.900);
-    --surface: theme(colors.gray.300);
-    --border: theme(colors.gray.400);
-    @apply bg-bg text-text
+    @apply bg-bg text-text 
   }
+}
+
+.surface {
+  @apply dark:bg-gray-800/20 bg-gray-300/40
+}
+
+.cool-image-hover {
+  @apply hover:outline-4 outline-yellow-500 outline outline-0 hover:outline-offset-4 transition-all dark:hover:shadow-[0px_25px_50px_-12px_#975a16,-20px_-25px_50px_-12px_#553c9a] hover:shadow-[0px_25px_50px_-12px_#553c9a,-20px_-25px_50px_-12px_#fbd38d]
 }
 
 a, a:link, a:visited {

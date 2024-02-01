@@ -50,6 +50,9 @@ export default defineNuxtConfig({
         'avatars0.githubusercontent.com'
       ]
   },
+  routeRules: {
+    '/vita-capris': { redirect: 'https://discord.gg/QhQkJhfEMZ' },
+  },
   app: {
     head: {
       charset: 'utf-8',

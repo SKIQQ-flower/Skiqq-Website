@@ -27,6 +27,7 @@ export default defineI18nConfig(() => ({
       social_media: "Redes Sociais",
       view_gallery: "Ver galeria",
       account_enter: "Entrar",
+      view_refsheet: "Ver referencia",
       blog_name: "Blog do Skiqq",
       login_title: "Quer comentar nos posts, não é mesmo?",
       bodedope_gallery: "Galeria do Bodedope",

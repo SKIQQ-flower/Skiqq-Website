@@ -7,10 +7,11 @@
     <div class="dark:bg-gray-800/20 bg-gray-300/40 z-10 relative w-full flex flex-nowrap justify-between px-5 rounded-b-3xl">
         <div class="titlebartitle">
             <img src="/svg/bodedope icon.svg" width="50em">
-            <h3>Skiqq Website</h3>
+            <h3 v-if="mobile">Skiqq</h3>
+            <h3 v-else="mobile">Skiqq Webiste</h3>
         </div>
         <div class="inline-flex items-center gap-2">
-            <a class="hover:text-yellow-400" href="https://github.com/SKIQQ-flower/Skiqq-Website"><Icon class="hover-icon" name="mdi:github" size="2em"/></a>
+            <a v-if="!mobile" class="hover:text-yellow-400" href="https://github.com/SKIQQ-flower/Skiqq-Website"><Icon class="hover-icon" name="mdi:github" size="2em"/></a>
             <button v-if="user" class="accountAvatar">
                 <NuxtImg width="35" :src="user.user_metadata.avatar_url"/>
             </button>

@@ -1,7 +1,7 @@
 <template>
-    <div class="flex relative dark:bg-gray-800/20  bg-gray-300/40 p-5 flex-col md:flex-row items-center rounded-3xl
+    <div class="flex relative dark:bg-gray-800/20 bg-gray-300/40 p-5 flex-col md:flex-row items-center rounded-3xl
         w-11/12 transition-all">
-        <NuxtImg width="450" class="rounded-2xl max-h-full" src="/img/Fursona/pfp.jpg" alt="Foto de perfil"/>
+        <NuxtImg width="450" class="rounded-2xl max-h-full cool-image-hover hover:w-[550px]" src="/img/Fursona/boykisser.png" alt="Foto de perfil"/>
         <div class="flex flex-col items-center">
             <h2>Skiqq</h2>
             <p>{{ $t('quote') }}</p>
