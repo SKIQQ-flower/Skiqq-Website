@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require("tailwindcss/colors")
+const colors = require("tailwindcss/colors");
 module.exports = {
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -9,21 +9,24 @@ module.exports = {
     "./app.vue",
     "./error.vue",
   ],
-  theme: {
-    extend: {},
-  },
   plugins: [],
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops) 100%, transparent)'
+        "gradient-radial":
+          "radial-gradient(var(--tw-gradient-stops) 100%, transparent)",
       },
       colors: {
-        'bg': 'var(--bg)',
-        'text': 'var(--text)',
-        'surface': 'var(--surface)',
-        'border': 'var(--border)'
+        bg: "var(--bg)",
+        text: "var(--text)",
+        surface: "var(--surface)",
+        border: "var(--border)",
       },
-    }
-  }
-}
+      backgroundPosition: {
+        "pos-0": "0% 0%",
+        "pos-100": "100% 100%",
+        "pos-200": "200% 200%",
+      },
+    },
+  },
+};

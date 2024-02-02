@@ -2,6 +2,7 @@ export default defineI18nConfig(() => ({
   fallbackLocale: 'en-US',
   messages: {
     "pt-BR": {
+      btn_close: 'Fechar',
       button_source_code: 'Código Fonte',
       quote: 'O bode mais fofo do globo terrestre!',
       role_programmer: "Desenvolvedor Fullstack",
@@ -27,15 +28,17 @@ export default defineI18nConfig(() => ({
       social_media: "Redes Sociais",
       view_gallery: "Ver galeria",
       account_enter: "Entrar",
-      view_refsheet: "Ver referencia",
+      see_refsheet: "Ver referencia",
       blog_name: "Blog do Skiqq",
       login_title: "Quer comentar nos posts, não é mesmo?",
       bodedope_gallery: "Galeria do Bodedope",
       home_page_description: "Skiqq é um programador, designer, pixel artista e desenvolvedor de jogos."
     },
     "en-US": {
+      btn_close: "Close",
       bodedope_gallery: "Bodedope's gallery",
       title_i_do: "I do",
+      see_refsheet: "See refsheet",
       account_enter: "Enter",
       blog_name: "Skiqq's Blog",
       login_title: "You want to comment in my posts, dont you?",

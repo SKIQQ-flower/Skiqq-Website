@@ -21,6 +21,14 @@ img {
   }
 }
 
+.cool-hover-button {
+  background: linear-gradient(90deg, rgba(187,149,35,1) 0%, rgba(187,149,35,1) 50%, rgba(140,83,202,1) 200%)
+}
+
+.cool-hover-button:hover {
+  background: linear-gradient(90deg, rgba(187,149,35,1) 0%, rgba(187,149,35,1) 0%, rgba(140,83,202,1) 200%)
+}
+
 .surface {
   @apply dark:bg-gray-800/20 bg-gray-300/40
 }
@@ -37,7 +45,7 @@ body {
   cursor: url('/pointers/pointer.png'), auto;
 }
 
-a, button:hover, .selectpointer {
+a, button:hover, .selectpointer, body::selection {
   cursor: url('/pointers/select.png'), auto;
 }
 
