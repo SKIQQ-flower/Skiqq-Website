@@ -8,7 +8,7 @@
             <h3>{{ $t('title_i_am') }}</h3>
             <div class="flex flex-wrap gap-1.5 justify-center w-9/12">
                 <Role icon="noto:man-technologist">{{ $t('role_programmer') }}</Role>
-                <Role icon="noto:puzzle-piece">{{ $t('role_autist') }}</Role>
+                <Role icon="twemoji:flag-brazil">{{ $t('brazillian') }}</Role>
             </div>
             <h3>{{ $t('title_i_do') }}</h3>
             <div class="flex flex-wrap gap-1.5 justify-center w-3/5">

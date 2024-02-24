@@ -1,5 +1,4 @@
 <script setup>
-    const user = useSupabaseUser()
     const mobile = useMediaQuery('(max-width: 768px)')
 </script>
 

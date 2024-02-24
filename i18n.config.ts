@@ -2,6 +2,7 @@ export default defineI18nConfig(() => ({
   fallbackLocale: 'en-US',
   messages: {
     "pt-BR": {
+      brazillian: "Brasileiro",
       button_source_code: 'Código Fonte',
       quote: 'O bode mais fofo do globo terrestre!',
       role_programmer: "Desenvolvedor Fullstack",
@@ -33,6 +34,7 @@ export default defineI18nConfig(() => ({
       home_page_description: "Skiqq é um programador, designer, pixel artista e desenvolvedor de jogos."
     },
     "en-US": {
+      brazillian: "Brazillian",
       bodedope_gallery: "Bodedope's gallery",
       title_i_do: "I do",
       account_enter: "Enter",

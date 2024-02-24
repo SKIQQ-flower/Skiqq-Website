@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@vueuse/nuxt',
     '@nuxt/content',
-    '@nuxtjs/supabase'
   ],
   postcss: {
     plugins: {
@@ -18,9 +17,6 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: '',
-  },
-  supabase: {
-    redirect: false
   },
   i18n: {
     detectBrowserLanguage: {

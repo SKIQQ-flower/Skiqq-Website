@@ -1,7 +1,6 @@
 <script setup>
 import { DateTime } from "luxon";
 const route = useRoute()
-const user = useSupabaseUser()
 const { data } = await useAsyncData('home', () => queryContent(route.params.id).findOne())
 if (data && data.value) {
     useSeoMeta({
