@@ -19,7 +19,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 .router-link-exact-active {
   @apply bg-purple-900
 }
