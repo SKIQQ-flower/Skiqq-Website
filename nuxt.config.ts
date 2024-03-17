@@ -48,6 +48,7 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/vita-capris': { redirect: 'https://discord.gg/QhQkJhfEMZ' },
+    '/netty': { redirect: 'https://discord.gg/C9x5ZVy2YR' },
   },
   app: {
     head: {
