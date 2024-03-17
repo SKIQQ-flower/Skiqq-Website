@@ -1,0 +1,1 @@
+import{_ as e}from"./DlAUqK2U.js";import{c as t,b as o,e as c}from"./Djl-K3GK.js";const s={},n=c("h1",null,"teste",-1),r=[n];function _(a,l){return o(),t("div",null,r)}const f=e(s,[["render",_]]);export{f as default};
