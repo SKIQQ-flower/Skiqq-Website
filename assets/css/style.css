@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Fredoka:700|Noto Sans:400');
+@import url('https://fonts.googleapis.com/css?family=DM Sans:700|Noto Sans:400');
 
 @tailwind base;
 @tailwind components;
@@ -8,17 +8,8 @@ img {
   image-rendering: pixelated;
 }
 
-@layer theme {
-  .dark {
-    --bg: theme(colors.gray.950);
-    --text: theme(colors.slate.50);
-    @apply bg-bg text-text
-  }
-  .light {
-    --bg: theme(colors.zinc.100);
-    --text: theme(colors.slate.900);
-    @apply bg-bg text-text 
-  }
+html {
+  @apply bg-gray-950 text-slate-50
 }
 
 .cool-hover-button {
@@ -117,8 +108,61 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Fredoka';
+  font-family: 'DM Sans';
   font-weight: 700;
+}
+
+.blink {
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
+}
+@-moz-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
+}
+@-webkit-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
+}
+@-ms-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
+}
+@-o-keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: inherit;
+  }
 }
 
 html {font-size: 100%;} /* 16px */

@@ -1,33 +1,34 @@
 {
-    "name": "nuxt-app",
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "build": "nuxt build",
-        "dev": "nuxt dev",
-        "generate": "nuxt generate",
-        "preview": "nuxt preview",
-        "postinstall": "nuxt prepare"
-    },
-    "devDependencies": {
-        "@nuxt/devtools": "latest",
-        "@nuxtjs/i18n": "^8.0.0-rc.5",
-        "autoprefixer": "^10.4.16",
-        "nuxt": "^3.8.0",
-        "postcss": "^8.4.32",
-        "tailwindcss": "^3.4.0",
-        "vue": "^3.3.7",
-        "vue-router": "^4.2.5"
-    },
-    "dependencies": {
-        "@giscus/vue": "^2.3.0",
-        "@lottiefiles/vue-lottie-player": "^1.1.0",
-        "@nuxt/content": "^2.9.0",
-        "@nuxt/image": "^1.0.0",
-        "@nuxtjs/color-mode": "^3.3.0",
-        "luxon": "^3.4.4",
-        "nuxt-icon": "^0.6.1",
-        "sitemap": "^7.1.1",
-        "vite": "^4.4.0"
-    }
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/i18n": "^8.0.0-rc.5",
+    "autoprefixer": "^10.4.16",
+    "nuxt": "^3.8.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0",
+    "vue": "^3.3.7",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@giscus/vue": "^2.3.0",
+    "@lottiefiles/vue-lottie-player": "^1.1.0",
+    "@nuxt/content": "^2.9.0",
+    "@nuxt/image": "^1.0.0",
+    "@nuxtjs/color-mode": "^3.3.0",
+    "luxon": "^3.4.4",
+    "nuxt-icon": "^0.6.1",
+    "sitemap": "^7.1.1",
+    "tailwindcss-animated": "^1.0.1",
+    "vite": "^4.4.0"
+  }
 }
