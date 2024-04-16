@@ -33,36 +33,6 @@ a, a:link, a:visited {
 }
 
 body {
-  cursor: url('/pointers/pointer.png'), auto;
-}
-
-a, button:hover, .selectpointer, body::selection {
-  cursor: url('/pointers/select.png'), auto;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0.3;
-    translate: -5rem 0rem 
-  }
-
-  30% {
-    opacity: 1;
-    translate: 0 0
-  }
-
-  60% {
-    opacity: 1;
-    translate: 0 0
-  }
-
-  100% {
-    opacity: 0.3;
-    translate: -5rem 0rem 
-  }
-}
-
-body {
   background-color: var(--background);
   color: var(--text);
   font-family: "Noto Sans", Inter, Sans;
@@ -110,59 +80,6 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: 'DM Sans';
   font-weight: 700;
-}
-
-.blink {
-  -webkit-animation: 1s blink step-end infinite;
-  -moz-animation: 1s blink step-end infinite;
-  -ms-animation: 1s blink step-end infinite;
-  -o-animation: 1s blink step-end infinite;
-  animation: 1s blink step-end infinite;
-}
-@keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: inherit;
-  }
-}
-@-moz-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: inherit;
-  }
-}
-@-webkit-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: inherit;
-  }
-}
-@-ms-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: inherit;
-  }
-}
-@-o-keyframes blink {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: inherit;
-  }
 }
 
 html {font-size: 100%;} /* 16px */
