@@ -1,7 +1,7 @@
 <template>
     <div class="flex-wrap backdrop-blur-md w-full md:w-9/12 2xl:w-2/6 bg-gradient-to-r from-slate-950/30 to-slate-900/30 p-4 rounded-xl border-slate-700/40 border">
         <div class="flex flex-col">
-            <div class="flex relative flex-row flex-wrap justify-between">
+            <div class="flex flex-row md: flex-wrap justify-between">
                 <div class="md:w-3/5 h-full w-full">
                     <div class="*:inline-block *:mr-2 whitespace-nowrap">
                         <p class="font-light font-mono">Seja bem vindo ao meu site!</p>
@@ -24,7 +24,7 @@
                         <Role name="logos:fedora">Fedora</Role>
                         <Role name="logos:c-plusplus">C++</Role>
                     </div>
-                    <div class="absolute bottom-0 font-mono flex flex-wrap items-bottom">
+                    <div class=" font-mono flex flex-wrap items-bottom">
                         <NuxtLink to="/" class="even:text-orange-500 odd:text-yellow-500">[ Página inicial ]</NuxtLink>
                         <NuxtLink to="/blog" class="even:text-orange-500 odd:text-yellow-500">[ Blog ]</NuxtLink>
                         <a href="https://twitter.com/skiqq_" class="even:text-orange-500 odd:text-yellow-500">[ Twitter ]</a>
