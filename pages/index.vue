@@ -1,12 +1,12 @@
 <template>
-    <div class="flex items-center justify-center flex-col xl:w-3/6 h-screen">
+    <div class="flex items-center justify-center flex-col xl:w-3/6 h-dvh"> <!-- Usando h-screen para definir a altura total da tela -->
         <div class="bg-purppy-800 w-full h-full rounded-xl text-white flex flex-col">
             <img class="rounded-xl w-full" src="/banner.png">
             <div class="p-5 flex flex-col items-start h-full flex-grow">
                 <div class="flex relative flex-row items-start h-fit gap-5">
                     <img class="absolute -top-[7rem] max-w-44 border-8 border-purppy-800 rounded-full" src="/pfp.jpg">
                 </div>
-                <div class="pt-16 h-full w-full flex-grow">
+                <div class="pt-16 h-2/6 w-full flex-grow">
                     <div class="bg-purppy-900 h-full p-2 rounded-xl w-full flex-grow">
                         <h1 class="font-mono text-4xl text-purppy-200 h-fit font-bold">Skiqq</h1>
                         <div class="flex items-start h-fit flex-row gap-5 text-2xl font-bold mb-2">
@@ -23,11 +23,18 @@
                             </button>
                         </div>
                         <TransitionGroup enter-from-class="opacity-0" enter-to-class="opacity-100" enter-active-class="transition-opacity ">
-                            <div v-if="currentTab === 0" class="flex">
+                            <div v-if="currentTab === 0" class="overflow-auto">
                                 <p>
                                     I am a young programmer who is passionate about programming. I make games, music, software,
                                     and many other things you can enjoy while drinking orange juice.
                                 </p>
+                                <p class="font-mono font-bold text-2xl">Also, i am a...</p>
+                                <div class="flex flex-wrap">
+                                    <div class="flex flex-row items-center flex-nowrap">
+                                        
+                                    </div>
+                                </div>
+                                <iframe height="150" width="150" id='ivplayer' src='https://yewtu.be/embed/edu0GSlJWvM?t=3' style='border:none'></iframe>
                             </div>
                             <div v-if="currentTab === 1" class="flex">
                                 <p>WIP</p>
