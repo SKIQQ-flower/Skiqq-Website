@@ -31,9 +31,10 @@
                                 <p class="font-mono font-bold text-2xl">Also, i am a...</p>
                                 <div class="flex flex-wrap">
                                     <div class="flex flex-row items-center flex-nowrap">
-                                        
+                                        <p>wip</p>
                                     </div>
                                 </div>
+                                <p class="font-mono font-bold text-2xl">My favorite music is...</p>
                                 <iframe height="150" width="150" id='ivplayer' src='https://yewtu.be/embed/edu0GSlJWvM?t=3' style='border:none'></iframe>
                             </div>
                             <div v-if="currentTab === 1" class="flex">
