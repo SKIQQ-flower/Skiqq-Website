@@ -4,6 +4,10 @@
 
 <style>
 #__nuxt {
-  @apply w-dvw h-dvh flex items-center bg-purppy-950 justify-center flex-col
+  @apply w-full h-full flex items-center justify-center flex-col
+}
+
+body {
+  @apply bg-purppy-950
 }
 </style>
