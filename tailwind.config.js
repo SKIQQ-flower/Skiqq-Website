@@ -2,6 +2,9 @@
 export default {
   content: [],
   theme: {
+    fontFamily: {
+      'mont': ['Montserrat', 'Inter', 'Arial']
+    },
     extend: {
       "colors": {
         "purppy": {
