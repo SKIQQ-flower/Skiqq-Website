@@ -9,7 +9,8 @@
         <div class="flex flex-wrap pt-5 gap-5 flex-row">
             <div class="flex flex-col gap-4">
                 <h2 class="font-mont text-4xl font-bold">Projects</h2>
-                <NuxtLink class="text-2xl flex flex-row gap-2 items-center rounded-xl text-purppy-200 bg-purppy-800 p-2">CNTG, Ceira no Telegram (Brazillian Telegram community) <Icon name="material-symbols:link"/></NuxtLink>
+                <NuxtLink href="https://t.me/ceiranotg" class="text-2xl flex flex-row gap-2 items-center rounded-xl text-purppy-200 bg-purppy-800 hover:bg-purppy-200/20 p-2">CNTG, Ceira no Telegram (Brazillian Telegram community) <Icon name="material-symbols:link"/></NuxtLink>
+                <NuxtLink href="https://t.me/soun_preview" class="text-2xl flex flex-row gap-2 items-center rounded-xl text-purppy-200 bg-purppy-800 hover:bg-purppy-200/20 p-2">Soun, an rpg game<Icon name="material-symbols:link"/></NuxtLink>
             </div>
         </div>
     </div>
