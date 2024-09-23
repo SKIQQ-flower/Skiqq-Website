@@ -5,6 +5,10 @@
   <NuxtPage/>
 </template>
 
+<script setup>
+defineOgImageComponent('default')
+</script>
+
 <style>
 #__nuxt {
   @apply w-full h-full flex items-center justify-center flex-col

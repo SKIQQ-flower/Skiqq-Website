@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxt/icon",
     "@nuxt/content",
-    "@nuxtjs/seo"
+    "@nuxtjs/seo",
+    '@nuxt/image'
   ],
   site: {
     url: 'https://skiqq.pw',
