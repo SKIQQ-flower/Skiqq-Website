@@ -1,36 +1,22 @@
-<script setup>
-const route = useRoute()
-const { t, locale } = useI18n()
-const head = useLocaleHead({
-  addDirAttribute: true,
-  identifierAttribute: 'id',
-  addSeoAttributes: true,
-})
+<template>
+  <Link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/>
+  <Link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  <NuxtPage/>
+</template>
 
-useHead({
-  titleTemplate: (titleChunk) => {
-      return titleChunk ? `${t(titleChunk)} - ${t('website_name')}` : `${t('website_name')}`
-  },
-  link: [
-      {
-        rel: 'icon',
-        type: 'image/x-icon',
-        href: '/svg/bodedope icon.svg'
-      }
-  ],
-  meta: [
-    { name: 'description', content: 'O bode mais fofo do universo!' },
-    { name: 'keywords', content: 'vue, nuxt, javascript, autismo, autism, skiqq' },
-  ],
-})
+<script setup>
+defineOgImageComponent('default')
 </script>
 
-<template>
-  <Html :lang="locale" :dir="head.htmlAttrs.dir">
-    <Body>
-      <NuxtLayout>
-        <NuxtPage/>
-      </NuxtLayout>      
-    </Body>
-  </Html>
-</template>
+<style>
+#__nuxt {
+  @apply w-full h-full flex items-center justify-center flex-col
+}
+
+body {
+  @apply bg-purppy-950
+}
+
+
+</style>

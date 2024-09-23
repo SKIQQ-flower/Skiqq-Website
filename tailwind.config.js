@@ -1,35 +1,27 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require("tailwindcss/colors");
-module.exports = {
-  content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./app.vue",
-    "./error.vue",
-  ],
-  plugins: [],
+export default {
+  content: [],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial":
-          "radial-gradient(var(--tw-gradient-stops) 100%, transparent)",
+      fontFamily: {
+        'mont': ['Montserrat', 'Inter', 'Arial']
       },
-      colors: {
-        bg: "var(--bg)",
-        text: "var(--text)",
-        surface: "var(--surface)",
-        border: "var(--border)",
-      },
-      backgroundPosition: {
-        "pos-0": "0% 0%",
-        "pos-100": "100% 100%",
-        "pos-200": "200% 200%",
-      },
+      "colors": {
+        "purppy": {
+          50: "#E6E3F2",
+          100: "#D1CAE7",
+          200: "#A296CF",
+          300: "#715DB6",
+          400: "#4E3E89",
+          500: "#302654",
+          600: "#261E43",
+          700: "#1C1631",
+          800: "#141023",
+          900: "#0A0812",
+          950: "#040307"
+        }
+      }
     },
-  },
-  plugins: [
-    require('tailwindcss-animated')
-  ],
-};
+    plugins: [],
+  }
+}
