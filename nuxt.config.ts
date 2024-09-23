@@ -9,6 +9,14 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     '@nuxt/image',
   ],
+  
+  site: {
+    url: 'https://skiqq.pw',
+    name: 'Skiqq Website',
+    description: 'The website of the cutest goat of the world!',
+    defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
+  },
+  
   routeRules: {
     '/vita-capris': { redirect: 'https://discord.gg/QhQkJhfEMZ' },
     '/netty': { redirect: 'https://discord.gg/C9x5ZVy2YR' },
@@ -23,3 +31,4 @@ export default defineNuxtConfig({
   build: {
     transpile: ['shiki'],
   },
+})
