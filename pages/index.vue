@@ -13,11 +13,11 @@
                   <NuxtLink href="https://github.com/SKIQQ-flower/Skiqq-Website" class="text-2xl flex flex-row flex-wrap transition-colors gap-2 items-center rounded-xl text-purppy-200 bg-purppy-800 hover:bg-purppy-200/20 p-2">This website<Icon size="2rem" name="material-symbols:link"/></NuxtLink>
               </div>
               <div class="flex flex-col gap-4">
-                <h2 class="font-mont text-4xl font-bold">Blog posts</h2>
+                <h1 class="font-mont flex items-center text-4xl font-bold">Blog posts<Icon name="material-symbols:arrow-left-alt"/></h1>
                 <ContentNavigation v-slot="{ navigation }">
-                  <ul>
+                  <ul class="flex flex-col gap-4">
                     <li v-for="link of navigation" :key="link._path">
-                      <NuxtLink class="text-2xl flex flex-row flex-wrap transition-colors gap-2 items-center rounded-xl text-purppy-200 bg-purppy-800 hover:bg-purppy-200/20 p-2" :to="'/blog' + link._path">{{ link.title }}<Icon size="2rem" name="material-symbols:newspaper"/></NuxtLink>
+                      <NuxtLink class="text-2xl flex flex-row flex-wrap transition-colors gap-2 items-center rounded-xl text-purppy-200 bg-purppy-800 hover:bg-purppy-200/20 p-2" :to="'/blog' + link._path">{{ link.title }}<Icon size="2rem" :name="link.icon || 'material-symbols:newspaper'"/></NuxtLink>
                     </li>
                   </ul>
                 </ContentNavigation>

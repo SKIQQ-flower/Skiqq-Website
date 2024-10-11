@@ -1,17 +1,17 @@
 <template>
     <div v-if="$route.params.id">
-        <NuxtLink to="/" class="flex text-white/90 p-4 w-full hover:text-purppy-200 justify-center flex-row gap-2">
+        <NuxtLink to="/" class="flex w-full text-white/90 p-4 hover:text-purppy-200 justify-center flex-row gap-2">
             <Icon size="1.5rem" name="material-symbols:home"/>
             <p>Homepage</p>
         </NuxtLink>
         <ContentDoc :path="'/' + $route.params.id">
             <template v-slot="{ doc }">
                 <div class="w-full flex justify-center">
-                    <div class="flex w-4/6 justify-center flex-col font-mont p-5 pt-10 text-white/90 items-center">
-                        <p class="font-bold w-full p-2 rounded-xl bg-purppy-700">
+                    <div class="flex w-full justify-center flex-col font-mont p-5 pt-10 text-white/90 items-center">
+                        <p class="font-bold md:w-5/6 w-full p-2 rounded-xl bg-purppy-700">
                             {{ doc.title }}
                         </p>
-                        <div class="whitespace-normal break-all">
+                        <div class="whitespace-normal break-words md:w-5/6 w-full p-5">
                             <ContentRenderer class="font-sans" :value="doc" />
                         </div>
                     </div>
